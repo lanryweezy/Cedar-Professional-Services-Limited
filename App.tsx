@@ -244,9 +244,9 @@ const HomePage: React.FC<{ setPage: (p: Page) => void }> = ({ setPage }) => {
   return (
     <div className="animate-in fade-in duration-700">
       <SEO 
-        title="Cedar Professional Services | Forensic Accounting & Tax Consultancy Nigeria" 
-        description="Leading Nigerian firm specializing in forensic accounting, fraud investigation, statutory audit, and tax advisory services. Founded in 2013."
-        keywords="forensic accounting Nigeria, tax consultancy Lagos, audit firm Nigeria, Cedar Professional Services, financial advisory Lagos"
+        title="Cedar Professional Services | Forensic Audit & Tax Advisory Nigeria" 
+        description="Top-tier Nigerian accounting firm for Forensic Audit, Fraud Investigation, and LIRS/FIRS Tax Compliance. CAC & Bank of Industry Accredited."
+        keywords="forensic accounting Lagos, tax clearance certificate Nigeria, CAC agent Lagos, audit firm Nigeria, CAMA 2020 compliance"
       />
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-50">
         <div 
@@ -266,7 +266,7 @@ const HomePage: React.FC<{ setPage: (p: Page) => void }> = ({ setPage }) => {
               Excellence in <span className="text-blue-600 italic">Financial</span> Integrity.
             </h1>
             <p className="text-lg text-slate-600 max-w-lg leading-relaxed animate-in slide-in-from-left-16 duration-1000">
-              World-class forensic accounting, tax consultancy, and audit services designed to help Nigerian organizations achieve excellence through precision.
+              Expert forensic investigation, tax advisory, and statutory audit services. We ensure your business is fully compliant with CAMA 2020 and Nigerian tax laws.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <button 
@@ -292,7 +292,7 @@ const HomePage: React.FC<{ setPage: (p: Page) => void }> = ({ setPage }) => {
               <div className="absolute -top-10 -left-10 w-32 h-32 bg-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
               <img 
                 src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Financial Professional" 
+                alt="Nigerian Financial Consultant" 
                 className="rounded-3xl shadow-2xl relative z-10 border-8 border-white animate-in zoom-in duration-700"
               />
             </div>
@@ -333,9 +333,9 @@ const AboutPage: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-700">
       <SEO 
-        title="About Us | Cedar Professional Services" 
-        description="Learn about the corporate profile, mission, and history of Cedar Professional Services Limited. Incorporated in 2013."
-        keywords="about Cedar Professional Services, corporate background, financial service mission"
+        title="Corporate Background | Cedar Professional Services Nigeria" 
+        description="Cedar Professional Services Limited: Established in 2013, we are a leading team of professional accountants and forensic experts in Lagos."
+        keywords="about cedar professional services, accounting firm history Nigeria, olugbenga folarin accountant, forensic audit firm profile"
       />
       <PageHeader title="Who We Are" subtitle="A team of professional accountants specializing in forensic accounting, fraud investigation, and tax advisory." />
       <section className="py-24 bg-white">
@@ -438,9 +438,9 @@ const ServicesPage: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-700">
       <SEO 
-        title="Our Services | Cedar Professional Services" 
-        description="Comprehensive descriptions of our core and specialized financial services, from Forensic Audit to Human Capital Management."
-        keywords="forensic accounting Lagos, tax planning Nigeria, Tally ERP setup, business restructuring Nigeria"
+        title="Audit & Tax Services | Tally ERP Nigeria" 
+        description="Comprehensive forensic audit, Tally ERP setup, and LIRS/FIRS tax planning. Expert secretarial services and bank reconciliation in Lagos."
+        keywords="Tally ERP 9 Nigeria price, forensic investigation services, statutory audit Lagos, bank charge reconciliation, tax planning Nigeria"
       />
       <PageHeader title="Our Services" subtitle="Specialized financial services born out of the need for professional financial support in the Nigerian Market." />
       <section className="py-24 bg-white">
@@ -618,9 +618,9 @@ const TeamPage: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-700">
       <SEO 
-        title="Meet the Team | Cedar Professional Services" 
-        description="Learn about our expert team lead by Olugbenga Folarin."
-        keywords="Cedar team, Olugbenga Folarin, audit experts"
+        title="Our Experts | Fellow Chartered Accountants Nigeria" 
+        description="Meet our team of ICAN Fellows, Forensic Auditors, and ERP Experts. Led by Olugbenga Folarin, a seasoned expert in Nigerian financial regulations."
+        keywords="ICAN fellows Lagos, forensic accountant profile, tally solutions expert nigeria, olugbenga folarin co, professional audit team"
       />
       <PageHeader title="Our Experts" subtitle="A multi-talented team of seasoned professionals with deep specialization in Nigerian and International markets." />
       <section className="py-24 bg-slate-50">
@@ -699,9 +699,9 @@ const ClientsPage: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-700">
       <SEO 
-        title="Our Clients | Cedar Professional Services" 
-        description="Trusted by government and private entities across Nigeria."
-        keywords="Cedar clients, public sector audit, private sector consultancy"
+        title="Client Track Record | World Bank & SFTAS Nigeria" 
+        description="Cedar Pro has successfully handled World Bank funded projects (SFTAS) and forensic audits for various state governments and top FMCG companies."
+        keywords="SFTAS Sokoto, Lagos state lotteries audit, World Bank project audit nigeria, FMCG forensic audit, payroll audit nigeria"
       />
       <PageHeader title="Client Accomplishments" subtitle="Trusted by leading Government Ministries, Agencies, Parastatals, and Corporate Entities across Nigeria." />
       <section className="py-24 bg-white">
@@ -755,9 +755,9 @@ const ContactPage: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-700">
       <SEO 
-        title="Contact Us | Cedar Professional Services" 
-        description="Connect with us for expert financial support in Lagos."
-        keywords="contact Cedar, Lagos accounting office"
+        title="Contact Professional Accountants | Lagos Nigeria" 
+        description="Connect with our experts in Lagos. Discuss forensic audit, Tally ERP setup, or LIRS tax monitoring. Office at CSS Bookshop House."
+        keywords="accounting firm in lagos island, forensic audit contact nigeria, yomi adesuyi accountant, olugbenga folarin contact"
       />
       <PageHeader title="Connect with Us" subtitle="Discuss any of the services in this profile or request further clarification from our expert partners." />
       <section className="py-24 bg-slate-50">
@@ -922,11 +922,11 @@ const Footer: React.FC<{ setPage: (p: Page) => void }> = ({ setPage }) => {
           <div className="space-y-6">
             <h4 className="font-bold text-slate-900 uppercase tracking-widest text-sm">Accreditation</h4>
             <div className="flex gap-4">
-               <div className="w-16 h-16 bg-white border border-slate-200 rounded-xl flex items-center justify-center p-2">
+               <div className="w-16 h-16 bg-white border border-slate-200 rounded-xl flex items-center justify-center p-2" title="Corporate Affairs Commission Accredited">
                   <span className="text-[10px] font-bold text-slate-400 text-center uppercase tracking-tighter leading-none">C.A.C Agent</span>
                </div>
-               <div className="w-16 h-16 bg-white border border-slate-200 rounded-xl flex items-center justify-center p-2">
-                  <span className="text-[10px] font-bold text-slate-400 text-center uppercase tracking-tighter leading-none">ICAN Certified</span>
+               <div className="w-16 h-16 bg-white border border-slate-200 rounded-xl flex items-center justify-center p-2" title="Bank of Industry Accredited Auditor">
+                  <span className="text-[10px] font-bold text-slate-400 text-center uppercase tracking-tighter leading-none">BOI Auditor</span>
                </div>
             </div>
           </div>
