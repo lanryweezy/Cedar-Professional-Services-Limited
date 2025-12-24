@@ -1,0 +1,7 @@
+{
+  "name": "Cedar Professional Services Limited",
+  "description": "A high-end professional corporate website for a Nigerian financial and forensic accounting firm, featuring services, team profiles, and client history.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
