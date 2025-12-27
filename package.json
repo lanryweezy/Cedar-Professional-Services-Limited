@@ -1,4 +1,3 @@
-
 {
   "name": "cedar-professional-services",
   "private": true,
@@ -10,9 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "^0.460.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "lucide-react": "^0.460.0"
+    "react-router-dom": "^7.11.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
