@@ -130,7 +130,7 @@ const Services: React.FC = () => {
         },
         {
             q: "Is Cedar Professional Services Limited accredited by the Bank of Industry (BOI)?",
-            a: "Yes, Cedar Professional Services has been a licensed and accredited SME Auditor to the Bank of Industry (BOI) since 2015, supporting businesses in accessing and managing federal expansion funding."
+            a: "Yes, we are accredited SME Auditors and Business Development Support Providers (BDSP) with the Bank of Industry Limited, helping businesses access capital and maintain compliance."
         },
         {
             q: "Do you provide Tally.ERP 9 and Sage installation and training?",

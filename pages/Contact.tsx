@@ -1,8 +1,19 @@
 
 import React, { useState } from 'react';
-import { CheckCircle2, AlertCircle, Loader2, Send, MapPin, Mail } from 'lucide-react';
+import {
+    CheckCircle2,
+    AlertCircle,
+    Loader2,
+    Send,
+    MapPin,
+    Mail,
+    Phone,
+    User,
+    Building2,
+    Hash,
+    HelpCircle
+} from 'lucide-react';
 import SEO from '../components/SEO';
-import PageHeader from '../components/PageHeader';
 
 const Contact: React.FC = () => {
     const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -10,7 +21,10 @@ const Contact: React.FC = () => {
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
-        message: ''
+        companyName: '',
+        phone: '',
+        serviceCategory: '',
+        requirements: ''
     });
 
     const validate = () => {
@@ -21,7 +35,9 @@ const Contact: React.FC = () => {
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
             newErrors.email = 'Invalid email format';
         }
-        if (!formData.message.trim()) newErrors.message = 'Message is required';
+        if (!formData.companyName.trim()) newErrors.companyName = 'Company name is required';
+        if (!formData.requirements.trim()) newErrors.requirements = 'Project requirements are required';
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -33,108 +49,209 @@ const Contact: React.FC = () => {
         setFormStatus('submitting');
         setTimeout(() => {
             setFormStatus('success');
-            setFormData({ fullName: '', email: '', message: '' });
+            setFormData({
+                fullName: '',
+                email: '',
+                companyName: '',
+                phone: '',
+                serviceCategory: '',
+                requirements: ''
+            });
         }, 1500);
     };
 
     return (
-        <div className="animate-in fade-in duration-700">
+        <div className="min-h-screen bg-slate-50 flex flex-col lg:flex-row pt-20">
             <SEO title="Contact Us | Cedar Pro Nigeria" description="Connect with our experts in Lagos." keywords="Contact Forensic Accountant Lagos" />
-            <PageHeader title="Connect With Us" subtitle="Strategic financial support is just a conversation away. Reach our partners directly." />
-            <section className="py-24 bg-slate-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                        <div className="space-y-12">
-                            <div className="bg-white p-12 rounded-[3rem] shadow-sm border border-slate-100 space-y-12">
-                                <div>
-                                    <h2 className="text-3xl font-display mb-6 tracking-tight">Managing Partners</h2>
-                                    <div className="space-y-8">
-                                        <div>
-                                            <p className="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-2">Olugbenga Folarin</p>
-                                            <a href="tel:08034521158" className="block text-slate-900 font-medium hover:text-blue-600 transition-colors rounded">0803 452 1158</a>
-                                            <p className="text-slate-400 text-sm">0702 837 5516 | 0805 888 7032</p>
-                                        </div>
-                                        <div>
-                                            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Solomon</p>
-                                            <a href="tel:08027165839" className="block text-slate-900 font-medium hover:text-blue-600 transition-colors rounded">0802 716 5839</a>
-                                        </div>
-                                        <div>
-                                            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Olaide</p>
-                                            <a href="tel:08035323440" className="block text-slate-900 font-medium hover:text-blue-600 transition-colors rounded">0803 532 3440</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="space-y-6 pt-12 border-t border-slate-50">
-                                    <div className="flex items-center gap-4 text-slate-600">
-                                        <MapPin className="text-blue-600" size={20} aria-hidden="true" />
-                                        <span className="text-sm">3rd Floor CSS Bookshop House, 50/52 Broad Street, CMS, Lagos.</span>
-                                    </div>
-                                    <div className="flex items-center gap-4 text-slate-600">
-                                        <Mail className="text-blue-600" size={20} aria-hidden="true" />
-                                        <span className="text-sm font-medium">cedarprofessionalservicesltd@gmail.com</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div className="bg-white p-12 rounded-[3rem] shadow-xl shadow-slate-200/50">
-                            <form className="space-y-6" onSubmit={handleSubmit} noValidate aria-label="Contact Assessment Form">
-                                <h3 className="text-3xl font-display text-slate-900 mb-8 tracking-tight">Request an Assessment</h3>
-                                {formStatus === 'success' ? (
-                                    <div className="text-center py-20 space-y-6 animate-in zoom-in duration-500" role="alert">
-                                        <CheckCircle2 size={64} className="mx-auto text-green-500" />
-                                        <p className="text-slate-900 font-bold text-xl">Thank you. Your message has been sent.</p>
-                                        <button onClick={() => setFormStatus('idle')} className="text-blue-600 font-bold hover:underline focus:outline-none rounded">Send another inquiry</button>
-                                    </div>
-                                ) : (
-                                    <>
-                                        <div className="space-y-1">
-                                            <label htmlFor="fullName" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Full Name</label>
-                                            <input
-                                                id="fullName"
-                                                type="text"
-                                                value={formData.fullName}
-                                                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                                                className={`w-full px-5 py-4 bg-slate-50 border rounded-2xl focus:border-blue-600 focus:outline-none transition-all ${errors.fullName ? 'border-red-500' : 'border-slate-100'}`}
-                                            />
-                                            {errors.fullName && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1"><AlertCircle size={12} /> {errors.fullName}</p>}
-                                        </div>
-                                        <div className="space-y-1">
-                                            <label htmlFor="email" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Email Address</label>
-                                            <input
-                                                id="email"
-                                                type="email"
-                                                value={formData.email}
-                                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                                className={`w-full px-5 py-4 bg-slate-50 border rounded-2xl focus:border-blue-600 focus:outline-none transition-all ${errors.email ? 'border-red-500' : 'border-slate-100'}`}
-                                            />
-                                            {errors.email && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1"><AlertCircle size={12} /> {errors.email}</p>}
-                                        </div>
-                                        <div className="space-y-1">
-                                            <label htmlFor="message" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Inquiry Details</label>
-                                            <textarea
-                                                id="message"
-                                                rows={4}
-                                                value={formData.message}
-                                                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                                className={`w-full px-5 py-4 bg-slate-50 border rounded-2xl focus:border-blue-600 focus:outline-none transition-all resize-none ${errors.message ? 'border-red-500' : 'border-slate-100'}`}
-                                            ></textarea>
-                                            {errors.message && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1"><AlertCircle size={12} /> {errors.message}</p>}
-                                        </div>
-                                        <button
-                                            type="submit"
-                                            className="w-full py-5 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all flex items-center justify-center gap-3 active:scale-[0.98] outline-none"
-                                            disabled={formStatus === 'submitting'}
-                                        >
-                                            {formStatus === 'submitting' ? <Loader2 className="animate-spin" aria-hidden="true" /> : <><Send size={18} aria-hidden="true" /> Send Inquiry</>}
-                                        </button>
-                                    </>
-                                )}
-                            </form>
+            {/* Left Column - Office Info */}
+            <div className="lg:w-[35%] bg-slate-950 text-white p-12 lg:p-20 space-y-16 relative overflow-hidden flex flex-col justify-center">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full -mr-32 -mt-32" />
+
+                <div className="space-y-6 relative z-10">
+                    <h1 className="text-6xl font-display tracking-tight">Lagos Office</h1>
+                    <p className="text-slate-400 text-lg font-light leading-relaxed max-w-sm">
+                        Visit our headquarters at the heart of Lagos Island for an in-person consultation.
+                    </p>
+                </div>
+
+                <div className="space-y-10 relative z-10">
+                    <div className="flex items-start gap-6">
+                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-900/20">
+                            <MapPin size={24} className="text-white" />
+                        </div>
+                        <div className="space-y-1">
+                            <p className="text-[10px] font-bold text-blue-500 uppercase tracking-widest">Address</p>
+                            <p className="text-slate-100 font-medium leading-relaxed">
+                                3rd Floor CSS Bookshop House, <br />
+                                50/52 Broad Street, CMS, Lagos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex items-start gap-6">
+                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-900/20">
+                            <Phone size={24} className="text-white" />
+                        </div>
+                        <div className="space-y-1">
+                            <p className="text-[10px] font-bold text-blue-500 uppercase tracking-widest">Direct Line</p>
+                            <a href="tel:08034521158" className="text-slate-100 text-xl font-bold hover:text-blue-400 transition-colors">
+                                0803 452 1158
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="flex items-start gap-6">
+                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-900/20">
+                            <Mail size={24} className="text-white" />
+                        </div>
+                        <div className="space-y-1">
+                            <p className="text-[10px] font-bold text-blue-500 uppercase tracking-widest">Email</p>
+                            <a href="mailto:cedarprofessionalservicesltd@gmail.com" className="text-slate-100 font-medium break-all hover:text-blue-400 transition-colors tracking-tight">
+                                cedarprofessionalservicesltd@gmail.com
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            {/* Right Column - Form */}
+            <div className="lg:w-[65%] bg-white p-12 lg:p-24 flex flex-col justify-center">
+                <div className="max-w-3xl mx-auto w-full space-y-12">
+                    <div className="space-y-4">
+                        <h2 className="text-5xl font-display text-slate-900 tracking-tight">Request an Assessment</h2>
+                        <p className="text-slate-500 text-lg font-light">Provide details about your business requirements below.</p>
+                    </div>
+
+                    {formStatus === 'success' ? (
+                        <div className="bg-slate-50 p-16 rounded-[3rem] text-center space-y-6 animate-in zoom-in duration-500 border border-slate-100" role="alert">
+                            <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <CheckCircle2 size={40} />
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-900">Assessment Requested!</h3>
+                            <p className="text-slate-500 font-light max-w-sm mx-auto">Thank you for your interest. One of our partners will review your requirements and reach out within 24 hours.</p>
+                            <button
+                                onClick={() => setFormStatus('idle')}
+                                className="px-10 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all active:scale-95"
+                            >
+                                Send Another Request
+                            </button>
+                        </div>
+                    ) : (
+                        <form className="space-y-8" onSubmit={handleSubmit}>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div className="space-y-3">
+                                    <label htmlFor="fullName" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                        <User size={14} className="text-slate-300" /> Full Name
+                                    </label>
+                                    <input
+                                        id="fullName"
+                                        type="text"
+                                        placeholder="Olumide Johnson"
+                                        value={formData.fullName}
+                                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                                        className={`w-full px-6 py-5 bg-white border-2 rounded-2xl focus:border-blue-600 focus:outline-none transition-all placeholder:text-slate-200 ${errors.fullName ? 'border-red-500' : 'border-slate-100'}`}
+                                    />
+                                    {errors.fullName && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.fullName}</p>}
+                                </div>
+
+                                <div className="space-y-3">
+                                    <label htmlFor="email" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                        <Mail size={14} className="text-slate-300" /> Work Email
+                                    </label>
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        placeholder="example@company.com"
+                                        value={formData.email}
+                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                        className={`w-full px-6 py-5 bg-white border-2 rounded-2xl focus:border-blue-600 focus:outline-none transition-all placeholder:text-slate-200 ${errors.email ? 'border-red-500' : 'border-slate-100'}`}
+                                    />
+                                    {errors.email && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.email}</p>}
+                                </div>
+
+                                <div className="space-y-3">
+                                    <label htmlFor="companyName" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                        <Building2 size={14} className="text-slate-300" /> Company Name
+                                    </label>
+                                    <input
+                                        id="companyName"
+                                        type="text"
+                                        placeholder="Zenith Global Ltd"
+                                        value={formData.companyName}
+                                        onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                                        className={`w-full px-6 py-5 bg-white border-2 rounded-2xl focus:border-blue-600 focus:outline-none transition-all placeholder:text-slate-200 ${errors.companyName ? 'border-red-500' : 'border-slate-100'}`}
+                                    />
+                                    {errors.companyName && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.companyName}</p>}
+                                </div>
+
+                                <div className="space-y-3">
+                                    <label htmlFor="phone" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                        <Hash size={14} className="text-slate-300" /> Phone Number
+                                    </label>
+                                    <input
+                                        id="phone"
+                                        type="text"
+                                        placeholder="+234..."
+                                        value={formData.phone}
+                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                        className={`w-full px-6 py-5 bg-white border-2 rounded-2xl focus:border-blue-600 focus:outline-none transition-all placeholder:text-slate-200 border-slate-100`}
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="space-y-3">
+                                <label htmlFor="service" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                    <Hash size={14} className="text-slate-300" /> Service Category
+                                </label>
+                                <select
+                                    id="service"
+                                    value={formData.serviceCategory}
+                                    onChange={(e) => setFormData({ ...formData, serviceCategory: e.target.value })}
+                                    className="w-full px-6 py-5 bg-white border-2 border-slate-100 rounded-2xl focus:border-blue-600 focus:outline-none transition-all appearance-none cursor-pointer"
+                                >
+                                    <option value="">Forensic Investigation & Fraud Audit</option>
+                                    <option value="tax">Tax Consultancy & Compliance</option>
+                                    <option value="audit">Statutory & Internal Audit</option>
+                                    <option value="corporate">Corporate Restructuring</option>
+                                    <option value="training">Tally/Sage Training</option>
+                                </select>
+                            </div>
+
+                            <div className="space-y-3">
+                                <label htmlFor="requirements" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                    <HelpCircle size={14} className="text-slate-300" /> Project Requirements
+                                </label>
+                                <textarea
+                                    id="requirements"
+                                    rows={5}
+                                    placeholder="Briefly describe the context of your inquiry..."
+                                    value={formData.requirements}
+                                    onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
+                                    className={`w-full px-6 py-5 bg-white border-2 rounded-2xl focus:border-blue-600 focus:outline-none transition-all resize-none placeholder:text-slate-200 ${errors.requirements ? 'border-red-500' : 'border-slate-100'}`}
+                                ></textarea>
+                                {errors.requirements && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.requirements}</p>}
+                            </div>
+
+                            <button
+                                type="submit"
+                                disabled={formStatus === 'submitting'}
+                                className="w-full py-6 bg-slate-900 text-white font-bold rounded-[2rem] hover:bg-blue-600 transition-all flex items-center justify-center gap-3 active:scale-[0.98] shadow-xl shadow-slate-200 relative overflow-hidden group"
+                            >
+                                <div className="absolute inset-0 bg-blue-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300 -z-10" />
+                                {formStatus === 'submitting' ? (
+                                    <Loader2 className="animate-spin" size={24} />
+                                ) : (
+                                    <>
+                                        <Send size={20} className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                                        <span>Submit Assessment Request</span>
+                                    </>
+                                )}
+                            </button>
+                        </form>
+                    )}
+                </div>
+            </div>
         </div>
     );
 };
