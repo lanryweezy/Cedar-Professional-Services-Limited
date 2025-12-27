@@ -24,10 +24,10 @@ const Clients: React.FC = () => {
         { name: "Solution Media & Infotec", service: "Forensic / Bank Charges Investigation", domain: "solutionmi.com", logo: "/clients/solution_logo.jpg" },
         { name: "KFC Nigeria (Devyani)", service: "External Auditor & BDSP", domain: "kfc.com", logo: "/clients/kfc_logo.jpg" },
         { name: "Portfolio Advisers Limited", service: "Tax Consultant", domain: "portfolioadvisors.com", logo: "/clients/portfolio_logo.png" },
-        { name: "Vitabiotics Nigeria Limited", service: "ERP Implementation", domain: "vitabiotics.com" },
+        { name: "Vitabiotics Nigeria Limited", service: "ERP Implementation", domain: "vitabiotics.com", logo: "/clients/vitabiotics_logo.jpg" },
         { name: "The Lacasera Products Company", service: "ERP Advisory", domain: "lacasera.com", logo: "/clients/lacasera_logo.jpg" },
         { name: "NIPCO Plc", service: "Tally ERP Solutions", domain: "nipcoplc.com", logo: "/clients/nipco_logo.jpg" },
-        { name: "Sonhart Industries Limited", service: "Strategic Financial Consultant", domain: "sonhart.com" }
+        { name: "Sonhart Industries Limited", service: "Strategic Financial Consultant", domain: "sonhart.com", logo: "/clients/sonhart_logo.jpg" }
     ];
 
     return (
