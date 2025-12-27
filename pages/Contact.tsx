@@ -11,7 +11,8 @@ import {
     User,
     Building2,
     Hash,
-    HelpCircle
+    HelpCircle,
+    ChevronRight
 } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -61,23 +62,23 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col lg:flex-row pt-20">
+        <div className="min-h-screen bg-white flex flex-col lg:flex-row pt-20">
             <SEO title="Contact Us | Cedar Pro Nigeria" description="Connect with our experts in Lagos." keywords="Contact Forensic Accountant Lagos" />
 
             {/* Left Column - Office Info */}
-            <div className="lg:w-[35%] bg-slate-950 text-white p-12 lg:p-20 space-y-16 relative overflow-hidden flex flex-col justify-center">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full -mr-32 -mt-32" />
+            <div className="lg:w-[40%] bg-slate-950 text-white p-12 lg:p-20 space-y-16 relative overflow-hidden flex flex-col justify-center border-r border-white/5">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full -mr-48 -mt-48" />
 
                 <div className="space-y-6 relative z-10">
-                    <h1 className="text-6xl font-display tracking-tight">Lagos Office</h1>
+                    <h1 className="text-6xl font-display tracking-tight leading-tight">Lagos Office</h1>
                     <p className="text-slate-400 text-lg font-light leading-relaxed max-w-sm">
                         Visit our headquarters at the heart of Lagos Island for an in-person consultation.
                     </p>
                 </div>
 
                 <div className="space-y-10 relative z-10">
-                    <div className="flex items-start gap-6">
-                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-900/20">
+                    <div className="flex items-start gap-6 group">
+                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-900/20 group-hover:scale-105 transition-transform">
                             <MapPin size={24} className="text-white" />
                         </div>
                         <div className="space-y-1">
@@ -89,8 +90,8 @@ const Contact: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-start gap-6">
-                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-900/20">
+                    <div className="flex items-start gap-6 group">
+                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-900/20 group-hover:scale-105 transition-transform">
                             <Phone size={24} className="text-white" />
                         </div>
                         <div className="space-y-1">
@@ -101,8 +102,8 @@ const Contact: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-start gap-6">
-                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-900/20">
+                    <div className="flex items-start gap-6 group">
+                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-900/20 group-hover:scale-105 transition-transform">
                             <Mail size={24} className="text-white" />
                         </div>
                         <div className="space-y-1">
@@ -116,10 +117,10 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Right Column - Form */}
-            <div className="lg:w-[65%] bg-white p-12 lg:p-24 flex flex-col justify-center">
-                <div className="max-w-3xl mx-auto w-full space-y-12">
+            <div className="lg:w-[60%] bg-white p-12 lg:p-20 flex flex-col justify-center relative">
+                <div className="max-w-3xl mx-auto w-full space-y-12 relative z-10">
                     <div className="space-y-4">
-                        <h2 className="text-5xl font-display text-slate-900 tracking-tight">Request an Assessment</h2>
+                        <h2 className="text-5xl font-display text-slate-900 tracking-tight leading-tight">Request an Assessment</h2>
                         <p className="text-slate-500 text-lg font-light">Provide details about your business requirements below.</p>
                     </div>
 
@@ -150,7 +151,7 @@ const Contact: React.FC = () => {
                                         placeholder="Olumide Johnson"
                                         value={formData.fullName}
                                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                                        className={`w-full px-6 py-5 bg-white border-2 rounded-2xl focus:border-blue-600 focus:outline-none transition-all placeholder:text-slate-200 ${errors.fullName ? 'border-red-500' : 'border-slate-100'}`}
+                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all placeholder:text-slate-300 ${errors.fullName ? 'border-red-500' : 'border-slate-50'}`}
                                     />
                                     {errors.fullName && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.fullName}</p>}
                                 </div>
@@ -165,7 +166,7 @@ const Contact: React.FC = () => {
                                         placeholder="example@company.com"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        className={`w-full px-6 py-5 bg-white border-2 rounded-2xl focus:border-blue-600 focus:outline-none transition-all placeholder:text-slate-200 ${errors.email ? 'border-red-500' : 'border-slate-100'}`}
+                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all placeholder:text-slate-300 ${errors.email ? 'border-red-500' : 'border-slate-50'}`}
                                     />
                                     {errors.email && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.email}</p>}
                                 </div>
@@ -180,7 +181,7 @@ const Contact: React.FC = () => {
                                         placeholder="Zenith Global Ltd"
                                         value={formData.companyName}
                                         onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                                        className={`w-full px-6 py-5 bg-white border-2 rounded-2xl focus:border-blue-600 focus:outline-none transition-all placeholder:text-slate-200 ${errors.companyName ? 'border-red-500' : 'border-slate-100'}`}
+                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all placeholder:text-slate-300 ${errors.companyName ? 'border-red-500' : 'border-slate-50'}`}
                                     />
                                     {errors.companyName && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.companyName}</p>}
                                 </div>
@@ -195,7 +196,7 @@ const Contact: React.FC = () => {
                                         placeholder="+234..."
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                        className={`w-full px-6 py-5 bg-white border-2 rounded-2xl focus:border-blue-600 focus:outline-none transition-all placeholder:text-slate-200 border-slate-100`}
+                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all placeholder:text-slate-300 border-slate-50`}
                                     />
                                 </div>
                             </div>
@@ -204,18 +205,21 @@ const Contact: React.FC = () => {
                                 <label htmlFor="service" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                                     <Hash size={14} className="text-slate-300" /> Service Category
                                 </label>
-                                <select
-                                    id="service"
-                                    value={formData.serviceCategory}
-                                    onChange={(e) => setFormData({ ...formData, serviceCategory: e.target.value })}
-                                    className="w-full px-6 py-5 bg-white border-2 border-slate-100 rounded-2xl focus:border-blue-600 focus:outline-none transition-all appearance-none cursor-pointer"
-                                >
-                                    <option value="">Forensic Investigation & Fraud Audit</option>
-                                    <option value="tax">Tax Consultancy & Compliance</option>
-                                    <option value="audit">Statutory & Internal Audit</option>
-                                    <option value="corporate">Corporate Restructuring</option>
-                                    <option value="training">Tally/Sage Training</option>
-                                </select>
+                                <div className="relative">
+                                    <select
+                                        id="service"
+                                        value={formData.serviceCategory}
+                                        onChange={(e) => setFormData({ ...formData, serviceCategory: e.target.value })}
+                                        className="w-full px-6 py-5 bg-slate-50 border-2 border-slate-50 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer"
+                                    >
+                                        <option value="">Forensic Investigation & Fraud Audit</option>
+                                        <option value="tax">Tax Consultancy & Compliance</option>
+                                        <option value="audit">Statutory & Internal Audit</option>
+                                        <option value="corporate">Corporate Restructuring</option>
+                                        <option value="training">Tally/Sage Training</option>
+                                    </select>
+                                    <ChevronRight size={18} className="absolute right-6 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" />
+                                </div>
                             </div>
 
                             <div className="space-y-3">
@@ -228,7 +232,7 @@ const Contact: React.FC = () => {
                                     placeholder="Briefly describe the context of your inquiry..."
                                     value={formData.requirements}
                                     onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
-                                    className={`w-full px-6 py-5 bg-white border-2 rounded-2xl focus:border-blue-600 focus:outline-none transition-all resize-none placeholder:text-slate-200 ${errors.requirements ? 'border-red-500' : 'border-slate-100'}`}
+                                    className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all resize-none placeholder:text-slate-300 ${errors.requirements ? 'border-red-500' : 'border-slate-50'}`}
                                 ></textarea>
                                 {errors.requirements && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.requirements}</p>}
                             </div>
