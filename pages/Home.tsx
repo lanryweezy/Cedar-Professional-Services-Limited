@@ -73,17 +73,16 @@ const Home: React.FC = () => {
             </section>
 
             {/* Regulatory Benchmarks */}
-            <section className="py-20 bg-slate-950 border-y border-white/5 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 pointer-events-none"></div>
+            <section className="py-12 bg-white border-y border-slate-100 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="text-center mb-16">
-                        <h2 className="text-[10px] font-bold text-blue-500 uppercase tracking-[0.4em] mb-4">Regulatory Partners & Accreditations</h2>
-                        <div className="h-1 w-12 bg-blue-600 mx-auto rounded-full opacity-50"></div>
+                    <div className="text-center mb-10">
+                        <h2 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em] mb-4">Regulatory Partners & Accreditations</h2>
+                        <div className="h-0.5 w-8 bg-blue-600/20 mx-auto rounded-full"></div>
                     </div>
                     <div className="relative overflow-hidden w-full">
-                        {/* Gradient Overlays for Fade Effect */}
-                        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-950 to-transparent z-20 pointer-events-none" />
-                        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-950 to-transparent z-20 pointer-events-none" />
+                        {/* Subtle White Gradient Overlays for Fade Effect */}
+                        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
+                        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
 
                         <div className="flex animate-scroll whitespace-nowrap gap-12 lg:gap-24 w-max px-12">
                             {[
@@ -99,11 +98,11 @@ const Home: React.FC = () => {
                                 { label: "FIRS", name: "Federal Inland Revenue", domain: "firs.gov.ng", src: "/firs_logo.svg" },
                                 { label: "NGX", name: "Nigerian Exchange Group", domain: "ngxgroup.com", src: "/ngx_logo.png" }
                             ]).map((partner, i) => (
-                                <div key={i} className="inline-flex items-center justify-center p-8 group cursor-default hover:bg-white/5 rounded-3xl transition-all min-w-[200px]">
+                                <div key={i} className="inline-flex items-center justify-center p-4 group cursor-default transition-all min-w-[160px]">
                                     <img
                                         src={partner.src || `https://logo.clearbit.com/${partner.domain}?size=128`}
                                         alt={partner.name}
-                                        className="max-h-12 md:max-h-16 w-auto object-contain brightness-0 invert opacity-70 group-hover:brightness-100 group-hover:invert-0 group-hover:opacity-100 transition-all duration-300"
+                                        className="max-h-8 md:max-h-12 w-auto object-contain transition-all duration-300 group-hover:scale-110"
                                     />
                                 </div>
                             ))}
