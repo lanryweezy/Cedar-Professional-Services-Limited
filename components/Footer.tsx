@@ -36,7 +36,10 @@ const Footer: React.FC = () => {
                     <div className="space-y-8 text-center md:text-left">
                         <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Head Office</h4>
                         <address className="not-italic text-slate-600 text-sm font-light leading-relaxed">
-                            CSS Bookshop House,<br />50/52 Broad Street, CMS, Lagos Island.
+                            CSS Bookshop House,<br />
+                            50/52 Broad Street, CMS,<br />
+                            <span className="font-medium text-slate-500">Lagos Island Financial District,</span><br />
+                            Lagos, Nigeria.
                         </address>
                     </div>
                 </div>

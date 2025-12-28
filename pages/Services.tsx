@@ -36,19 +36,19 @@ const Services: React.FC = () => {
             items: [
                 {
                     name: "Special Audits and Forensic Investigation",
-                    desc: "Expert forensic accounting and fraud investigation in Nigeria. Detailed review of books and records to form a reliable opinion on financial affairs, compliant with CAMA 1990 and modern standards."
+                    desc: "Expert forensic accounting and fraud investigation in Nigeria. Detailed review to form a reliable opinion, compliant with CAMA 2020, ISA, and modern forensic standards."
                 },
                 {
-                    name: "Fraud Investigation",
-                    desc: "Specialized investigations into financial irregularities and corporate fraud. We provide evidence-based reporting for legal and regulatory internal corporate requirements."
+                    name: "Detailed Fraud Investigation",
+                    desc: "Specialized investigations into financial irregularities. We provide evidence-based reporting for legal proceedings and EFCC/regulatory compliance."
                 },
                 {
-                    name: "Staff Auditing",
-                    desc: "Personnel studies, management audit and advice on personnel related matters to ensure organizational efficiency."
+                    name: "Staff Studies & Management Audit",
+                    desc: " comprehensive personnel audits and management reviews to drive organizational efficiency and curb payroll fraud."
                 },
                 {
-                    name: "Fixed Assets Audit",
-                    desc: "Fixed assets listing, identification and numbering services for corporate clients to maintain accurate asset registries."
+                    name: "Fixed Assets Management",
+                    desc: "End-to-end fixed assets verification, tagging, and register construction to ensure asset security and accurate financial reporting."
                 }
             ]
         },
@@ -59,19 +59,19 @@ const Services: React.FC = () => {
             items: [
                 {
                     name: "Tax Consultancy & Planning",
-                    desc: "Navigate FIRS and LIRS complexities with ease. We handle tax registrations, capital acceptance certificates, and strategic tax planning for maximum fiscal efficiency."
+                    desc: "Navigate the Finance Act 2023 nuances. We handle CIT, VAT, WHT, and EDT filings with FIRS and LIRS, ensuring zero penalty exposure."
                 },
                 {
                     name: "Accountancy Services",
-                    desc: "Professional preparation of accounts, documentation of accounting systems, and expert implementation of computerized ERP software like Tally.ERP 9, Sage, and Peachtree."
+                    desc: "Professional bookkeeping and financial statement preparation in accordance with IFRS. Experts in Tally.ERP 9, Sage, and Peachtree integration."
                 },
                 {
                     name: "Financial Advisory Services",
-                    desc: "Sourcing of funds and tailored financial packages for business expansion. Expert guidance on Bank of Industry (BOI) funding."
+                    desc: "Sourcing of funds and tailored financial packages. Accredited Bank of Industry (BOI) consultants for SME funding and expansion capital."
                 },
                 {
                     name: "Financial Due Diligence",
-                    desc: "Comprehensive review of books for investors and management. Determine fair value and going concern through SWOT analysis."
+                    desc: "Buy-side and sell-side due diligence. we assess fair value and 'going concern' status through rigorous SWOT and financial analysis."
                 }
             ]
         },
@@ -82,19 +82,19 @@ const Services: React.FC = () => {
             items: [
                 {
                     name: "Comprehensive Business Solutions",
-                    desc: "We provide full-spectrum financial support to ensure your business maintains 100% compliance and thrives in a competitive market."
+                    desc: "From startup registration to post-incorporation filings. We ensure 100% compliance with Nigerian corporate law and market best practices."
                 },
                 {
-                    name: "Restructuring and Re-organization",
-                    desc: "Revitalizing underperforming businesses through strategic restructuring and rejuvenation of morbid systems."
+                    name: "Business Restructuring",
+                    desc: "Revitalizing underperforming entities. We design strategic turnaround plans for distressed businesses in the Nigerian market."
                 },
                 {
                     name: "Mergers and Acquisitions",
-                    desc: "Strategic advisory on merger suitability and acquisition proposals. We conduct full investigations of target businesses."
+                    desc: "Strategic advisory on mergers. We conduct deep-dive investigations of target companies to uncover hidden liabilities before you sign."
                 },
                 {
-                    name: "Secretariat Services",
-                    desc: "Ensuring compliance with Companies and Allied Matters Decree and other related legislation."
+                    name: "Company Secretarial Services",
+                    desc: "Filing of Annual Returns and statutory compliance with the Corporate Affairs Commission (CAC) under the Companies and Allied Matters Act 2020."
                 }
             ]
         },
@@ -105,19 +105,19 @@ const Services: React.FC = () => {
             items: [
                 {
                     name: "Reporting Accountants",
-                    desc: "Licensed reporting accountants for security market entrants and quoted companies on the Nigerian Exchange."
+                    desc: "Licensed reporting accountants for IPOs and capital market transactions on the Nigerian Exchange Group (NGX)."
                 },
                 {
-                    name: "Bank Reconciliation Matters",
-                    desc: "Advocating for clients to resolve extraneous bank charges. We investigate transaction histories to recover erroneous deductions."
+                    name: "Bank Reconciliation & Recovery",
+                    desc: "Forensic analysis of bank statements to recover excess bank charges and illegal deductions from Nigerian commercial banks."
                 },
                 {
                     name: "Human Capital Management",
-                    desc: "Strategic search and recruitment of highly qualified professionals. We provide strategic staff outsourcing for contract roles."
+                    desc: "Executive search and recruitment for finance roles. We verify credentials and background to ensure you hire trusted professionals."
                 },
                 {
-                    name: "Training and Development",
-                    desc: "Practical-oriented training in Banking, Accounting, and Information Technology facilitated by industry veterans."
+                    name: "Corporate Training",
+                    desc: "Practical workshops on Nigerian Tax Laws, Forensic Accounting, and ERP usage facilitated by seasoned industry veterans."
                 }
             ]
         }
@@ -126,23 +126,23 @@ const Services: React.FC = () => {
     const faqs = [
         {
             q: "What are the requirements for FIRS Tax Clearance in Nigeria?",
-            a: "Requirements include evidence of tax payments for the last three years, completed application forms, and audited financial statements. Cedar Pro assists in streamlining this process with FIRS and LIRS."
+            a: "Requirements include evidence of tax payments (CIT, VAT, EDT) for the last three years, TIN validation, and audited financial statements. Cedar Pro assists in streamlining this process via the FIRS TaxPro Max portal."
         },
         {
             q: "How can a company recover excess or erroneous bank charges?",
-            a: "We conduct comprehensive investigations of bank statements and transaction histories to identify overcharges. Our team then advocates on your behalf to negotiate and recover erroneous deductions through professional representation."
+            a: "We conduct forensic investigations of your bank statements over a 6-year period (statute of limitations). Our team identifies illegal charges and engages the bank for immediate reversal and refund."
         },
         {
             q: "Is Cedar Professional Services Limited accredited by the Bank of Industry (BOI)?",
-            a: "Yes, we are accredited SME Auditors and Business Development Support Providers (BDSP) with the Bank of Industry Limited, helping businesses access capital and maintain compliance."
+            a: "Yes, we are accredited Business Development Support Providers (BDSP) with the Bank of Industry. We help Nigerian SMEs package bankable business plans to access low-interest BOI intervention funds."
         },
         {
             q: "Do you provide Tally.ERP 9 and Sage installation and training?",
-            a: "Absolutely. We are experts in the implementation of computerized accounting systems. We handle setup, documentation, and practical staff training for Tally.ERP 9, Sage, Peachtree, and other ERP solutions."
+            a: "Absolutely. We are authorized partners for major ERP solutions. We handle installation, chart of accounts setup to Nigerian standards, and staff training for Tally.ERP 9 and Sage 50/Cloud."
         },
         {
             q: "What is your role in World Bank-funded projects like SFTAS?",
-            a: "We serve as strategic consultants for programs like SFTAS (States Fiscal Transparency, Accountability and Sustainability). Our role includes payroll forensic auditing, revenue collection verification, and financial transparency investigations for state governments."
+            a: "We serve as Independent Verification Agents (IVAs) and consultants for programs like SFTAS. Our role involves validating state-level fiscal performance indicators and ensuring transparency in public fund management."
         }
     ];
 
@@ -248,7 +248,7 @@ const Services: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
+
             <div className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <LeadMagnet />

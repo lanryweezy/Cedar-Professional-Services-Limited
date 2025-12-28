@@ -26,7 +26,7 @@ const About: React.FC = () => {
                             </div>
                             <h2 className="text-4xl font-display text-slate-900 leading-tight tracking-tight">A Legacy of Trust and Financial Accuracy.</h2>
                             <p className="text-slate-600 text-lg leading-relaxed font-light">
-                                Cedar Professional Services Limited (RC No. 1134779) was born out of the increasing business opportunities in the Nigerian Market and the need for professional financial services. Duly incorporated in August 2013, we have evolved into a premier firm recognized for forensic investigation and complex tax planning.
+                                Cedar Professional Services Limited (RC No. 1134779) is a leading, wholly indigenous Nigerian financial consulting firm. Incorporated in August 2013, we have evolved from a Lagos-based startup into a premier national firm recognized for forensic investigation, complex tax planning, and strategic business recovery.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
                                 <div className="space-y-4">

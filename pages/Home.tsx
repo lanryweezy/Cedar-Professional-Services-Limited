@@ -22,33 +22,61 @@ const Home: React.FC = () => {
 
     const organizationSchema = {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "AccountingService",
         "name": "Cedar Professional Services Limited",
         "legalName": "Cedar Professional Services Limited",
         "url": "https://cedarpro.com.ng/",
         "logo": "https://cedarpro.com.ng/logo.png",
+        "description": "Leading forensic audit, tax advisory, and financial consulting firm in Lagos, Nigeria. Accredited by FIRS, BOI, and CAC.",
         "foundingDate": "2013",
         "founders": [
             {
                 "@type": "Person",
-                "name": "Olugbenga Folarin"
+                "name": "Olugbenga Folarin",
+                "jobTitle": "Managing Partner"
             }
         ],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "3rd Floor CSS Bookshop House, 50/52 Broad Street, CMS",
-            "addressLocality": "Lagos",
+            "addressLocality": "Lagos Island",
             "addressRegion": "Lagos",
+            "postalCode": "101223",
             "addressCountry": "NG"
         },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 6.4550,
+            "longitude": 3.3941 // Coordinates for Broad Street, Lagos
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Lagos" },
+            { "@type": "City", "name": "Victoria Island" },
+            { "@type": "City", "name": "Ikoyi" },
+            { "@type": "City", "name": "Ikeja" },
+            { "@type": "City", "name": "Lekki" },
+            { "@type": "Country", "name": "Nigeria" }
+        ],
+        "hasMap": "https://goo.gl/maps/YourGoogleMapLink", // Placeholder for actual map link if available
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "17:00"
+            }
+        ],
+        "priceRange": "$$",
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+2348034521158",
-            "contactType": "customer service"
+            "contactType": "customer service",
+            "areaServed": "NG",
+            "availableLanguage": "English"
         },
         "sameAs": [
-            // Add social media links here if available
-            // "https://www.linkedin.com/company/cedarproservices/" 
+            "https://www.linkedin.com/company/cedar-professional-services-limited"
         ]
     };
 
@@ -330,7 +358,7 @@ const Home: React.FC = () => {
                         ))}
                         {/* Duplicate for infinite scroll effect */}
                         {[
-                           {
+                            {
                                 challenge: "Significant financial discrepancies and revenue leakage were suspected within a major division.",
                                 solution: "Conducted a deep-dive forensic audit, tracing transactions and identifying control weaknesses.",
                                 result: "Uncovered systemic issues leading to the recovery of over ₦50M in lost revenue and fortified internal controls.",

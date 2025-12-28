@@ -24,6 +24,17 @@ export interface ClientRecord {
   type: 'Public' | 'Private';
 }
 
+export interface Post {
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  category: string;
+  slug: string;
+  image: string;
+  content: string;
+}
+
 export interface NavItem {
   label: string;
   href: string;
