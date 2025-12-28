@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
                                         <NavLink
                                             to={item.path}
                                             onClick={handleNavClick}
-                                            className={({ isActive }) => `flex items-center gap-1 px-3 py-4 text-[11px] font-bold uppercase tracking-widest transition-colors ${isActive || activeDropdown === item.label ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'}`}
+                                            className={({ isActive }) => `flex items-center gap-1 px-3 py-2 text-[13px] font-bold uppercase tracking-widest transition-colors ${isActive || activeDropdown === item.label ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'}`}
                                         >
                                             {item.label}
                                             <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180 text-blue-600' : ''}`} />
@@ -86,12 +86,22 @@ const Navbar: React.FC = () => {
                                     <NavLink
                                         to={item.path}
                                         onClick={handleNavClick}
-                                        className={({ isActive }) => `text-[11px] font-bold transition-all uppercase tracking-widest focus:outline-none relative group px-3 py-4 rounded ${isActive ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'}`}
+                                        className={({ isActive }) =>
+                                            item.label === 'Contact'
+                                                ? `ml-4 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-[11px] font-bold uppercase tracking-widest rounded-full shadow-lg shadow-blue-200 hover:shadow-blue-300 transition-all transform hover:-translate-y-0.5`
+                                                : `text-[13px] font-bold transition-all uppercase tracking-widest focus:outline-none relative group px-3 py-2 rounded ${isActive ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'}`
+                                        }
                                     >
                                         {({ isActive }) => (
                                             <>
-                                                {item.label}
-                                                <span className={`absolute bottom-2 left-0 h-[2px] bg-blue-600 transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                                                {item.label === 'Contact' ? (
+                                                    <span>Contact Us</span>
+                                                ) : (
+                                                    <>
+                                                        {item.label}
+                                                        <span className={`absolute bottom-0 left-0 h-[2px] bg-blue-600 transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                                                    </>
+                                                )}
                                             </>
                                         )}
                                     </NavLink>
@@ -104,7 +114,7 @@ const Navbar: React.FC = () => {
                                                 key={sub.path}
                                                 to={sub.path}
                                                 onClick={handleNavClick}
-                                                className={({ isActive }) => `block px-4 py-3 text-[10px] font-bold uppercase tracking-widest rounded-xl transition-all ${isActive ? 'text-blue-600 bg-blue-50' : 'text-slate-600 hover:text-blue-600 hover:bg-slate-50'}`}
+                                                className={({ isActive }) => `block px-4 py-3 text-[11px] font-bold uppercase tracking-widest rounded-xl transition-all ${isActive ? 'text-blue-600 bg-blue-50' : 'text-slate-600 hover:text-blue-600 hover:bg-slate-50'}`}
                                             >
                                                 {sub.label}
                                             </NavLink>

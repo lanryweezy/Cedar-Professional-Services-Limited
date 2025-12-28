@@ -247,7 +247,7 @@ const Home: React.FC = () => {
                                     {v.icon}
                                 </div>
                                 <h4 className="text-xl font-bold text-slate-900">{v.title}</h4>
-                                <p className="text-slate-500 text-sm leading-relaxed font-light">{v.desc}</p>
+                                <p className="text-slate-600 text-sm leading-relaxed font-light">{v.desc}</p>
                             </div>
                         ))}
                     </div>

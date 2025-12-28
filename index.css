@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply antialiased text-slate-900 selection:bg-blue-100 selection:text-blue-900;
+    @apply antialiased text-slate-900 text-base leading-relaxed selection:bg-blue-100 selection:text-blue-900;
   }
 }
 

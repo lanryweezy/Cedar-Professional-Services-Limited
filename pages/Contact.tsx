@@ -62,10 +62,10 @@ const Contact: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-white flex flex-col lg:flex-row pt-20">
-            <SEO 
-                title="Contact Us | Cedar Pro Nigeria" 
-                description="Connect with our experts in Lagos." 
-                keywords="Contact Forensic Accountant Lagos" 
+            <SEO
+                title="Contact Us | Cedar Pro Nigeria"
+                description="Connect with our experts in Lagos."
+                keywords="Contact Forensic Accountant Lagos"
                 canonicalUrl="https://cedarpro.com.ng/contact"
             />
 
@@ -146,7 +146,7 @@ const Contact: React.FC = () => {
                         <form className="space-y-8" onSubmit={handleSubmit}>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div className="space-y-3">
-                                    <label htmlFor="fullName" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                    <label htmlFor="fullName" className="flex items-center gap-2 text-[10px] font-bold text-blue-800 uppercase tracking-widest">
                                         <User size={14} className="text-slate-300" /> Full Name
                                     </label>
                                     <input
@@ -161,7 +161,7 @@ const Contact: React.FC = () => {
                                 </div>
 
                                 <div className="space-y-3">
-                                    <label htmlFor="email" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                    <label htmlFor="email" className="flex items-center gap-2 text-[10px] font-bold text-blue-800 uppercase tracking-widest">
                                         <Mail size={14} className="text-slate-300" /> Work Email
                                     </label>
                                     <input
@@ -176,7 +176,7 @@ const Contact: React.FC = () => {
                                 </div>
 
                                 <div className="space-y-3">
-                                    <label htmlFor="companyName" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                    <label htmlFor="companyName" className="flex items-center gap-2 text-[10px] font-bold text-blue-800 uppercase tracking-widest">
                                         <Building2 size={14} className="text-slate-300" /> Company Name
                                     </label>
                                     <input
@@ -191,7 +191,7 @@ const Contact: React.FC = () => {
                                 </div>
 
                                 <div className="space-y-3">
-                                    <label htmlFor="phone" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                    <label htmlFor="phone" className="flex items-center gap-2 text-[10px] font-bold text-blue-800 uppercase tracking-widest">
                                         <Hash size={14} className="text-slate-300" /> Phone Number
                                     </label>
                                     <input
@@ -206,7 +206,7 @@ const Contact: React.FC = () => {
                             </div>
 
                             <div className="space-y-3">
-                                <label htmlFor="service" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                <label htmlFor="service" className="flex items-center gap-2 text-[10px] font-bold text-blue-800 uppercase tracking-widest">
                                     <Hash size={14} className="text-slate-300" /> Service Category
                                 </label>
                                 <div className="relative">
@@ -227,7 +227,7 @@ const Contact: React.FC = () => {
                             </div>
 
                             <div className="space-y-3">
-                                <label htmlFor="requirements" className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                <label htmlFor="requirements" className="flex items-center gap-2 text-[10px] font-bold text-blue-800 uppercase tracking-widest">
                                     <HelpCircle size={14} className="text-slate-300" /> Project Requirements
                                 </label>
                                 <textarea

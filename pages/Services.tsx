@@ -181,7 +181,7 @@ const Services: React.FC = () => {
                                             {pillar.icon}
                                         </div>
                                         <div>
-                                            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Core Competency</p>
+                                            <p className="text-[10px] font-bold uppercase tracking-widest text-blue-800">Core Competency</p>
                                             <p className="text-slate-900 font-bold">{pillar.category}</p>
                                         </div>
                                     </div>
@@ -204,7 +204,7 @@ const Services: React.FC = () => {
                                                 <div className="w-2 h-2 bg-blue-600 rounded-full" />
                                                 {item.name}
                                             </h3>
-                                            <p className="text-slate-500 text-sm leading-relaxed font-light pl-4 border-l-2 border-slate-200 group-hover:border-blue-200 transition-colors">
+                                            <p className="text-slate-600 text-sm leading-relaxed font-light pl-4 border-l-2 border-slate-200 group-hover:border-blue-200 transition-colors">
                                                 {item.desc}
                                             </p>
                                         </div>
