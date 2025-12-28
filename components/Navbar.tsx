@@ -72,20 +72,26 @@ const Navbar: React.FC = () => {
                                 onMouseLeave={() => setActiveDropdown(null)}
                             >
                                 {item.submenu ? (
-                                    <div className="flex items-center gap-1 px-3 py-2 cursor-pointer text-[11px] font-bold uppercase tracking-widest text-slate-600 hover:text-blue-600 transition-colors">
-                                        {item.label}
-                                        <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180 text-blue-600' : ''}`} />
+                                    <div className="flex items-center">
+                                        <NavLink
+                                            to={item.path}
+                                            onClick={handleNavClick}
+                                            className={({ isActive }) => `flex items-center gap-1 px-3 py-4 text-[11px] font-bold uppercase tracking-widest transition-colors ${isActive || activeDropdown === item.label ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'}`}
+                                        >
+                                            {item.label}
+                                            <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180 text-blue-600' : ''}`} />
+                                        </NavLink>
                                     </div>
                                 ) : (
                                     <NavLink
                                         to={item.path}
                                         onClick={handleNavClick}
-                                        className={({ isActive }) => `text-[11px] font-bold transition-all uppercase tracking-widest focus:outline-none relative group px-3 py-2 rounded ${isActive ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'}`}
+                                        className={({ isActive }) => `text-[11px] font-bold transition-all uppercase tracking-widest focus:outline-none relative group px-3 py-4 rounded ${isActive ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'}`}
                                     >
                                         {({ isActive }) => (
                                             <>
                                                 {item.label}
-                                                <span className={`absolute -bottom-1 left-0 h-[2px] bg-blue-600 transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                                                <span className={`absolute bottom-2 left-0 h-[2px] bg-blue-600 transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                                             </>
                                         )}
                                     </NavLink>

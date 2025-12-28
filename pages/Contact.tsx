@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
             <SEO title="Contact Us | Cedar Pro Nigeria" description="Connect with our experts in Lagos." keywords="Contact Forensic Accountant Lagos" />
 
             {/* Left Column - Office Info */}
-            <div className="lg:w-[40%] bg-slate-950 text-white p-12 lg:p-20 space-y-16 relative overflow-hidden flex flex-col justify-center border-r border-white/5">
+            <div className="lg:w-[40%] bg-blue-900 text-white p-12 lg:p-20 space-y-16 relative overflow-hidden flex flex-col justify-center border-r border-white/5">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full -mr-48 -mt-48" />
 
                 <div className="space-y-6 relative z-10">

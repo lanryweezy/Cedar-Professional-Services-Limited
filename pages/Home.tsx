@@ -73,11 +73,12 @@ const Home: React.FC = () => {
             </section>
 
             {/* Regulatory Benchmarks */}
-            <section className="py-12 bg-white border-y border-slate-100 relative overflow-hidden">
+            {/* Regulatory Benchmarks */}
+            <section className="py-12 bg-blue-900 border-y border-blue-900 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center mb-10">
-                        <h2 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em] mb-4">Regulatory Partners & Accreditations</h2>
-                        <div className="h-0.5 w-8 bg-blue-600/20 mx-auto rounded-full"></div>
+                        <h2 className="text-[10px] font-bold text-blue-200 uppercase tracking-[0.4em] mb-4">Regulatory Partners & Accreditations</h2>
+                        <div className="h-0.5 w-8 bg-white/20 mx-auto rounded-full"></div>
                     </div>
                     <div className="relative w-full">
                         <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-20 px-4 py-8">
@@ -89,14 +90,14 @@ const Home: React.FC = () => {
                                 { label: "NGX", name: "Nigerian Exchange Group", domain: "ngxgroup.com", src: "/ngx_logo.png" }
                             ].map((partner, i) => (
                                 <div key={i} className="flex flex-col items-center group cursor-default transition-all duration-300">
-                                    <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                                    <div className="p-4 bg-white rounded-2xl border border-white/10 group-hover:border-blue-400 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all">
                                         <img
                                             src={partner.src || `https://logo.clearbit.com/${partner.domain}?size=128`}
                                             alt={partner.name}
                                             className="h-10 md:h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105"
                                         />
                                     </div>
-                                    <span className="mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">{partner.label}</span>
+                                    <span className="mt-4 text-[10px] font-bold text-blue-200/50 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">{partner.label}</span>
                                 </div>
                             ))}
                         </div>
@@ -229,24 +230,146 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
+            {/* Client Success Stories */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+                    <div className="text-center space-y-4">
+                        <h2 className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.3em]">Client Success</h2>
+                        <h3 className="text-4xl font-display text-slate-900 tracking-tight">Trusted by Industry Leaders.</h3>
+                    </div>
+                </div>
+
+                <div className="relative w-full overflow-hidden">
+                    <div className="flex animate-scroll hover:pause gap-8 w-max px-8">
+                        {[
+                            {
+                                challenge: "Significant financial discrepancies and revenue leakage were suspected within a major division.",
+                                solution: "Conducted a deep-dive forensic audit, tracing transactions and identifying control weaknesses.",
+                                result: "Uncovered systemic issues leading to the recovery of over ₦50M in lost revenue and fortified internal controls.",
+                                author: "Chief Financial Officer",
+                                company: "Leading FMCG Manufacturer"
+                            },
+                            {
+                                challenge: "Needed to secure significant capital for a new factory expansion but faced a complex BOI loan application process.",
+                                solution: "As accredited BDSPs, we prepared a compelling business case, financial projections, and managed the entire application.",
+                                result: "Successfully secured the required funding in record time, enabling the client to break ground ahead of schedule.",
+                                author: "Managing Director",
+                                company: "Agro-Allied Ventures"
+                            },
+                            {
+                                challenge: "High tax liabilities were impacting profitability, coupled with the risk of non-compliance with evolving FIRS regulations.",
+                                solution: "Developed and implemented a strategic tax plan that optimized deductions and credits while ensuring full regulatory adherence.",
+                                result: "Reduced the client's overall tax liability by 30% in the first fiscal year, significantly boosting their bottom line.",
+                                author: "Director of Operations",
+                                company: "Oil & Gas Services Ltd"
+                            },
+                            {
+                                quote: "The implementation of Tally ERP transformed our inventory management. We now have real-time visibility across all our branches.",
+                                challenge: "Lacked centralized inventory control, leading to stockouts in some branches and overstocking in others.",
+                                solution: "Designed and deployed a customized Tally ERP 9 solution connecting all branches to a central inventory system.",
+                                result: "Achieved real-time, group-wide inventory visibility, reducing stock discrepancies by 95% and improving order fulfillment.",
+                                author: "General Manager",
+                                company: "Retail Chain Nigeria"
+                            },
+                            {
+                                challenge: "The board required a higher level of assurance for investors beyond the standard statutory audit.",
+                                solution: "Provided a rigorous external audit with an expanded scope, focusing on corporate governance and risk management frameworks.",
+                                result: "The detailed audit report provided complete confidence to investors, leading to a successful subsequent funding round.",
+                                author: "Board Chairman",
+                                company: "Financial Services Group"
+                            }
+                        ].map((t, i) => (
+                            <div key={i} className="w-[400px] p-8 bg-slate-50 hover:bg-white rounded-[2.5rem] border border-slate-100 hover:shadow-xl transition-all duration-500 space-y-6 flex flex-col">
+                                <div className="flex gap-1 text-blue-600">
+                                    {[...Array(5)].map((_, j) => <CheckCircle2 key={j} size={16} fill="currentColor" className="text-blue-600" />)}
+                                </div>
+                                <div className="flex-grow space-y-4">
+                                    <p className="text-slate-600 font-medium leading-relaxed"><strong>Challenge:</strong> {t.challenge}</p>
+                                    <p className="text-slate-600 font-medium leading-relaxed"><strong>Solution:</strong> {t.solution}</p>
+                                    <p className="text-blue-600 font-bold leading-relaxed"><strong>Result:</strong> {t.result}</p>
+                                </div>
+                                <div className="border-t border-slate-200 pt-6">
+                                    <div className="font-bold text-slate-900">{t.author}</div>
+                                    <div className="text-blue-500 text-xs font-bold uppercase tracking-widest mt-1">{t.company}</div>
+                                </div>
+                            </div>
+                        ))}
+                        {/* Duplicate for infinite scroll effect */}
+                        {[
+                           {
+                                challenge: "Significant financial discrepancies and revenue leakage were suspected within a major division.",
+                                solution: "Conducted a deep-dive forensic audit, tracing transactions and identifying control weaknesses.",
+                                result: "Uncovered systemic issues leading to the recovery of over ₦50M in lost revenue and fortified internal controls.",
+                                author: "Chief Financial Officer",
+                                company: "Leading FMCG Manufacturer"
+                            },
+                            {
+                                challenge: "Needed to secure significant capital for a new factory expansion but faced a complex BOI loan application process.",
+                                solution: "As accredited BDSPs, we prepared a compelling business case, financial projections, and managed the entire application.",
+                                result: "Successfully secured the required funding in record time, enabling the client to break ground ahead of schedule.",
+                                author: "Managing Director",
+                                company: "Agro-Allied Ventures"
+                            },
+                            {
+                                challenge: "High tax liabilities were impacting profitability, coupled with the risk of non-compliance with evolving FIRS regulations.",
+                                solution: "Developed and implemented a strategic tax plan that optimized deductions and credits while ensuring full regulatory adherence.",
+                                result: "Reduced the client's overall tax liability by 30% in the first fiscal year, significantly boosting their bottom line.",
+                                author: "Director of Operations",
+                                company: "Oil & Gas Services Ltd"
+                            },
+                            {
+                                quote: "The implementation of Tally ERP transformed our inventory management. We now have real-time visibility across all our branches.",
+                                challenge: "Lacked centralized inventory control, leading to stockouts in some branches and overstocking in others.",
+                                solution: "Designed and deployed a customized Tally ERP 9 solution connecting all branches to a central inventory system.",
+                                result: "Achieved real-time, group-wide inventory visibility, reducing stock discrepancies by 95% and improving order fulfillment.",
+                                author: "General Manager",
+                                company: "Retail Chain Nigeria"
+                            },
+                            {
+                                challenge: "The board required a higher level of assurance for investors beyond the standard statutory audit.",
+                                solution: "Provided a rigorous external audit with an expanded scope, focusing on corporate governance and risk management frameworks.",
+                                result: "The detailed audit report provided complete confidence to investors, leading to a successful subsequent funding round.",
+                                author: "Board Chairman",
+                                company: "Financial Services Group"
+                            }
+                        ].map((t, i) => (
+                            <div key={`dup-${i}`} className="w-[400px] p-8 bg-slate-50 hover:bg-white rounded-[2.5rem] border border-slate-100 hover:shadow-xl transition-all duration-500 space-y-6 flex flex-col">
+                                <div className="flex gap-1 text-blue-600">
+                                    {[...Array(5)].map((_, j) => <CheckCircle2 key={j} size={16} fill="currentColor" className="text-blue-600" />)}
+                                </div>
+                                <div className="flex-grow space-y-4">
+                                    <p className="text-slate-600 font-medium leading-relaxed"><strong>Challenge:</strong> {t.challenge}</p>
+                                    <p className="text-slate-600 font-medium leading-relaxed"><strong>Solution:</strong> {t.solution}</p>
+                                    <p className="text-blue-600 font-bold leading-relaxed"><strong>Result:</strong> {t.result}</p>
+                                </div>
+                                <div className="border-t border-slate-200 pt-6">
+                                    <div className="font-bold text-slate-900">{t.author}</div>
+                                    <div className="text-blue-500 text-xs font-bold uppercase tracking-widest mt-1">{t.company}</div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Row */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-blue-900">
                 <div className="max-w-4xl mx-auto px-4 text-center space-y-12">
-                    <Heart className="mx-auto text-blue-600 animate-pulse" size={56} aria-hidden="true" />
+                    <Heart className="mx-auto text-blue-400 animate-pulse" size={56} aria-hidden="true" />
                     <div className="space-y-6">
-                        <blockquote className="text-3xl md:text-4xl font-display text-slate-900 leading-relaxed italic tracking-tight">
+                        <blockquote className="text-3xl md:text-4xl font-display text-white leading-relaxed italic tracking-tight">
                             "Built on a shared vision of the future, achieved with humility, helping our clients maximize value at every turn."
                         </blockquote>
                         <div className="flex items-center justify-center gap-4">
-                            <div className="h-px w-12 bg-slate-200"></div>
-                            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400">Our Corporate Culture</p>
-                            <div className="h-px w-12 bg-slate-200"></div>
+                            <div className="h-px w-12 bg-blue-800"></div>
+                            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-blue-300">Our Corporate Culture</p>
+                            <div className="h-px w-12 bg-blue-800"></div>
                         </div>
                     </div>
                     <div className="pt-8">
                         <button
                             onClick={() => navigate('/contact')}
-                            className="px-12 py-6 bg-blue-600 text-white font-bold rounded-2xl shadow-xl shadow-blue-200 hover:bg-slate-900 transition-all flex items-center justify-center mx-auto group focus:outline-none"
+                            className="px-12 py-6 bg-white text-blue-900 font-bold rounded-2xl shadow-xl hover:bg-blue-50 transition-all flex items-center justify-center mx-auto group focus:outline-none"
                         >
                             Partner With Us
                             <ChevronRight className="ml-2 group-hover:translate-x-2 transition-transform" aria-hidden="true" />
