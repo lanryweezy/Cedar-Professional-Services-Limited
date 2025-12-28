@@ -62,8 +62,8 @@ const Home: React.FC = () => {
                         <div className="relative w-full max-w-md group">
                             <div className="absolute inset-0 bg-blue-600 rounded-[2.5rem] rotate-3 -z-10 transition-transform group-hover:rotate-6 duration-500 opacity-10"></div>
                             <img
-                                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80"
-                                alt="Modern corporate financial office representation"
+                                src="/hero_inclusive.png"
+                                alt="Modern Nigerian corporate financial office with black professionals"
                                 className="rounded-[2.5rem] shadow-2xl relative z-10 border-[12px] border-white transition-transform group-hover:-translate-y-2 duration-500"
                                 loading="eager"
                             />
@@ -79,31 +79,24 @@ const Home: React.FC = () => {
                         <h2 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em] mb-4">Regulatory Partners & Accreditations</h2>
                         <div className="h-0.5 w-8 bg-blue-600/20 mx-auto rounded-full"></div>
                     </div>
-                    <div className="relative overflow-hidden w-full">
-                        {/* Subtle White Gradient Overlays for Fade Effect */}
-                        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
-                        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
-
-                        <div className="flex animate-scroll whitespace-nowrap gap-12 lg:gap-24 w-max px-12">
+                    <div className="relative w-full">
+                        <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-20 px-4 py-8">
                             {[
                                 { label: "CAC", name: "Corporate Affairs Commission", domain: "cac.gov.ng", src: "/cac_logo.png" },
                                 { label: "ICAN", name: "Inst. of Chartered Accountants", domain: "icanig.org", src: "/ican_logo.png" },
                                 { label: "BOI", name: "Bank of Industry", domain: "boi.ng", src: "/boi_logo.png" },
                                 { label: "FIRS", name: "Federal Inland Revenue", domain: "firs.gov.ng", src: "/firs_logo.svg" },
                                 { label: "NGX", name: "Nigerian Exchange Group", domain: "ngxgroup.com", src: "/ngx_logo.png" }
-                            ].concat([
-                                { label: "CAC", name: "Corporate Affairs Commission", domain: "cac.gov.ng", src: "/cac_logo.png" },
-                                { label: "ICAN", name: "Inst. of Chartered Accountants", domain: "icanig.org", src: "/ican_logo.png" },
-                                { label: "BOI", name: "Bank of Industry", domain: "boi.ng", src: "/boi_logo.png" },
-                                { label: "FIRS", name: "Federal Inland Revenue", domain: "firs.gov.ng", src: "/firs_logo.svg" },
-                                { label: "NGX", name: "Nigerian Exchange Group", domain: "ngxgroup.com", src: "/ngx_logo.png" }
-                            ]).map((partner, i) => (
-                                <div key={i} className="inline-flex items-center justify-center p-4 group cursor-default transition-all min-w-[160px]">
-                                    <img
-                                        src={partner.src || `https://logo.clearbit.com/${partner.domain}?size=128`}
-                                        alt={partner.name}
-                                        className="max-h-8 md:max-h-12 w-auto object-contain transition-all duration-300 group-hover:scale-110"
-                                    />
+                            ].map((partner, i) => (
+                                <div key={i} className="flex flex-col items-center group cursor-default transition-all duration-300">
+                                    <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                                        <img
+                                            src={partner.src || `https://logo.clearbit.com/${partner.domain}?size=128`}
+                                            alt={partner.name}
+                                            className="h-10 md:h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                                        />
+                                    </div>
+                                    <span className="mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">{partner.label}</span>
                                 </div>
                             ))}
                         </div>
@@ -246,7 +239,7 @@ const Home: React.FC = () => {
                         </blockquote>
                         <div className="flex items-center justify-center gap-4">
                             <div className="h-px w-12 bg-slate-200"></div>
-                            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400">Cedar Corporate Culture</p>
+                            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400">Our Corporate Culture</p>
                             <div className="h-px w-12 bg-slate-200"></div>
                         </div>
                     </div>

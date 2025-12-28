@@ -10,6 +10,7 @@ import Services from './pages/Services';
 import Team from './pages/Team';
 import Clients from './pages/Clients';
 import Contact from './pages/Contact';
+import Blog from './pages/Blog';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
             <Route path="/team" element={<Team />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
             {/* Fallback to Home */}
             <Route path="*" element={<Home />} />
           </Routes>
