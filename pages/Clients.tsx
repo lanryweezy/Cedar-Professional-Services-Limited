@@ -1,4 +1,3 @@
-
 import React from 'react';
 import SEO from '../components/SEO';
 import PageHeader from '../components/PageHeader';
@@ -32,7 +31,12 @@ const Clients: React.FC = () => {
 
     return (
         <div className="animate-in fade-in duration-700">
-            <SEO title="Our Clients | Cedar Pro Nigeria" description="Trusted by Government Agencies and Blue-chip corporations." keywords="SFTAS Audit, Lagos State Auditor" />
+            <SEO 
+                title="Our Clients | Cedar Pro Nigeria" 
+                description="Trusted by Government Agencies and Blue-chip corporations." 
+                keywords="SFTAS Audit, Lagos State Auditor"
+                canonicalUrl="https://cedarpro.com.ng/clients"
+            />
             <PageHeader title="Our Portfolio" subtitle="A testament to our reliability across both Public and Private sectors." />
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -155,6 +154,7 @@ const Services: React.FC = () => {
                 title="Professional Services | Cedar Professional Services Nigeria"
                 description="Comprehensive financial, audit, tax, and advisory services. From forensic investigation to ERP implementation and BOI advisory."
                 keywords="forensic audit Nigeria, tax consultancy Lagos, ERP implementation, financial due diligence, BOI advisory, business restructuring"
+                canonicalUrl="https://cedarpro.com.ng/services"
             />
             <PageHeader
                 title="Core Strategic Pillars"

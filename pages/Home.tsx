@@ -20,12 +20,46 @@ import SEO from '../components/SEO';
 const Home: React.FC = () => {
     const navigate = useNavigate();
 
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cedar Professional Services Limited",
+        "legalName": "Cedar Professional Services Limited",
+        "url": "https://cedarpro.com.ng/",
+        "logo": "https://cedarpro.com.ng/logo.png",
+        "foundingDate": "2013",
+        "founders": [
+            {
+                "@type": "Person",
+                "name": "Olugbenga Folarin"
+            }
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3rd Floor CSS Bookshop House, 50/52 Broad Street, CMS",
+            "addressLocality": "Lagos",
+            "addressRegion": "Lagos",
+            "addressCountry": "NG"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+2348034521158",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            // Add social media links here if available
+            // "https://www.linkedin.com/company/cedarproservices/" 
+        ]
+    };
+
     return (
         <div className="animate-in fade-in duration-700">
             <SEO
                 title="Cedar Professional Services | Forensic Audit & Tax Advisory Nigeria"
                 description="Top-tier Nigerian accounting firm for Forensic Audit, Fraud Investigation, and LIRS/FIRS Tax Compliance. CAC & Bank of Industry Accredited."
                 keywords="forensic accounting Lagos, tax clearance certificate Nigeria, CAC agent Lagos, audit firm Nigeria, CAMA 2020 compliance"
+                canonicalUrl="https://cedarpro.com.ng/"
+                schemaData={organizationSchema}
             />
 
             {/* Hero Section */}
@@ -42,7 +76,7 @@ const Home: React.FC = () => {
                         <p className="text-xl text-slate-600 max-w-xl leading-relaxed font-light">
                             Expert forensic investigation, tax advisory, and statutory audit services. We safeguard your corporate legacy through precision and unmatched professional passion.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start pt-6">
+                        <div className="flex flex-col sm:flex-row gap-5 justify-center md::justify-start pt-6">
                             <button
                                 onClick={() => navigate('/contact')}
                                 className="px-10 py-5 bg-slate-900 text-white font-bold rounded-2xl shadow-xl shadow-slate-200 hover:bg-blue-600 transition-all flex items-center justify-center group focus:outline-none"

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Target, Eye, ShieldCheck, Cpu, Users } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -11,6 +10,7 @@ const About: React.FC = () => {
                 title="About Us | Cedar Professional Services Nigeria"
                 description="Cedar Professional Services is a leading financial consultancy firm in Lagos, Nigeria, specializing in forensic audit and tax advisory since 2013."
                 keywords="Cedar Professional Services, Nigeria accounting history, forensic audit firm Lagos"
+                canonicalUrl="https://cedarpro.com.ng/about"
             />
             <PageHeader
                 title="Our Heritage & Vision"

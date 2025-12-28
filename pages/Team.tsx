@@ -1,4 +1,3 @@
-
 import React, { useState, Suspense, lazy } from 'react';
 import { X, ChevronRight } from 'lucide-react';
 import { Personnel } from '../types';
@@ -83,7 +82,12 @@ const Team: React.FC = () => {
 
     return (
         <div className="animate-in fade-in duration-700">
-            <SEO title="Our Team | Cedar Pro Nigeria" description="Meet our ICAN Fellows and Forensic Audit Experts." keywords="ICAN Fellows, Forensic Accountants Nigeria" />
+            <SEO 
+                title="Our Team | Cedar Pro Nigeria" 
+                description="Meet our ICAN Fellows and Forensic Audit Experts." 
+                keywords="ICAN Fellows, Forensic Accountants Nigeria"
+                canonicalUrl="https://cedarpro.com.ng/team"
+            />
             <PageHeader title="Our Experts" subtitle="Multi-disciplinary veterans bringing global certification and local market mastery to every engagement." />
             <section className="py-24 bg-slate-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

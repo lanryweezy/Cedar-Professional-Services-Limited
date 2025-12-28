@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
     CheckCircle2,
@@ -63,7 +62,12 @@ const Contact: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-white flex flex-col lg:flex-row pt-20">
-            <SEO title="Contact Us | Cedar Pro Nigeria" description="Connect with our experts in Lagos." keywords="Contact Forensic Accountant Lagos" />
+            <SEO 
+                title="Contact Us | Cedar Pro Nigeria" 
+                description="Connect with our experts in Lagos." 
+                keywords="Contact Forensic Accountant Lagos" 
+                canonicalUrl="https://cedarpro.com.ng/contact"
+            />
 
             {/* Left Column - Office Info */}
             <div className="lg:w-[40%] bg-blue-900 text-white p-12 lg:p-20 space-y-16 relative overflow-hidden flex flex-col justify-center border-r border-white/5">
