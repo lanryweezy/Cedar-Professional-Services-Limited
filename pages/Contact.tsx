@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
                     </div>
 
                     {formStatus === 'success' ? (
-                        <div className="bg-slate-50 p-16 rounded-[3rem] text-center space-y-6 animate-in zoom-in duration-500 border border-slate-100" role="alert">
+                        <div className="bg-slate-50 p-16 rounded-[2.5rem] text-center space-y-6 animate-in zoom-in duration-500 border border-slate-100" role="alert">
                             <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <CheckCircle2 size={40} />
                             </div>
@@ -244,7 +244,7 @@ const Contact: React.FC = () => {
                             <button
                                 type="submit"
                                 disabled={formStatus === 'submitting'}
-                                className="w-full py-6 bg-slate-900 text-white font-bold rounded-[2rem] hover:bg-blue-600 transition-all flex items-center justify-center gap-3 active:scale-[0.98] shadow-xl shadow-slate-200 relative overflow-hidden group"
+                                className="w-full py-6 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all flex items-center justify-center gap-3 active:scale-[0.98] shadow-xl shadow-slate-200 relative overflow-hidden group"
                             >
                                 <div className="absolute inset-0 bg-blue-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300 -z-10" />
                                 {formStatus === 'submitting' ? (

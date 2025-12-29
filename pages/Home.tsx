@@ -195,7 +195,7 @@ const Home: React.FC = () => {
                                 features: ["Targeted Investigations", "Term-Specific Reporting", "Evidence-Based Insights"]
                             }
                         ].map((s, i) => (
-                            <div key={i} className="group p-12 bg-slate-50 rounded-[3rem] border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
+                            <div key={i} className="group p-12 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-24 h-24 bg-blue-600/5 rounded-bl-[4rem] group-hover:bg-blue-600 transition-colors duration-500" />
                                 <div className="mb-8">{s.icon}</div>
                                 <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">{s.title}</h3>
@@ -257,7 +257,7 @@ const Home: React.FC = () => {
             {/* Leadership Spotlight */}
             <section className="py-24 bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-slate-900 rounded-[3rem] flex flex-col lg:flex-row items-center overflow-hidden relative shadow-2xl">
+                    <div className="bg-slate-900 rounded-[2.5rem] flex flex-col lg:flex-row items-center overflow-hidden relative shadow-2xl">
                         <div className="absolute top-0 right-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1920&q=80')] opacity-5 mix-blend-overlay pointer-events-none"></div>
                         <div className="lg:w-1/2 p-12 lg:p-20 space-y-8 relative z-10">
                             <h2 className="text-[10px] font-bold text-blue-500 uppercase tracking-[0.4em]">Our Leadership</h2>

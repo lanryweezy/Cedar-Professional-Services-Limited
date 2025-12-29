@@ -45,7 +45,7 @@ const About: React.FC = () => {
                             <img
                                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
                                 alt="Architecture symbolic of corporate stability and growth"
-                                className="rounded-[3rem] shadow-2xl"
+                                className="rounded-[2.5rem] shadow-2xl"
                                 loading="lazy"
                             />
                         </div>

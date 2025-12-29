@@ -168,12 +168,12 @@ const Services: React.FC = () => {
                             {/* Image Side */}
                             <div className="lg:w-1/2 w-full">
                                 <div className="relative group">
-                                    <div className={`absolute inset-0 bg-blue-600 rounded-[3rem] rotate-3 transition-transform duration-500 group-hover:rotate-6 opacity-10 -z-10`} />
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/20 to-transparent rounded-[3rem] z-10 pointer-events-none" />
+                                    <div className={`absolute inset-0 bg-blue-600 rounded-[2.5rem] rotate-3 transition-transform duration-500 group-hover:rotate-6 opacity-10 -z-10`} />
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/20 to-transparent rounded-[2.5rem] z-10 pointer-events-none" />
                                     <img
                                         src={pillar.image}
                                         alt={pillar.category}
-                                        className="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover border-[8px] border-white"
+                                        className="rounded-[2.5rem] shadow-2xl w-full h-[500px] object-cover border-[8px] border-white"
                                         loading={idx === 0 ? "eager" : "lazy"}
                                     />
                                     <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg z-20 flex items-center gap-4">
@@ -199,7 +199,7 @@ const Services: React.FC = () => {
 
                                 <div className="grid grid-cols-1 gap-6">
                                     {pillar.items.map((item, i) => (
-                                        <div key={i} className="group p-6 bg-slate-50 hover:bg-white border border-slate-100 hover:shadow-xl rounded-3xl transition-all duration-300">
+                                        <div key={i} className="group p-6 bg-slate-50 hover:bg-white border border-slate-100 hover:shadow-xl rounded-[2.5rem] transition-all duration-300">
                                             <h3 className="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
                                                 <div className="w-2 h-2 bg-blue-600 rounded-full" />
                                                 {item.name}
@@ -230,7 +230,7 @@ const Services: React.FC = () => {
                     </div>
                     <div className="max-w-4xl mx-auto space-y-4">
                         {faqs.map((faq, i) => (
-                            <div key={i} className={`border ${openFaq === i ? 'border-blue-500 bg-blue-800/30' : 'border-white/10 bg-white/5'} rounded-[2rem] overflow-hidden transition-all duration-300 backdrop-blur-sm`}>
+                            <div key={i} className={`border ${openFaq === i ? 'border-blue-500 bg-blue-800/30' : 'border-white/10 bg-white/5'} rounded-[2.5rem] overflow-hidden transition-all duration-300 backdrop-blur-sm`}>
                                 <button
                                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                                     className="w-full flex justify-between items-center p-8 text-left group focus:outline-none"
@@ -255,7 +255,7 @@ const Services: React.FC = () => {
                 </div>
             </div>
 
-            <div className="bg-slate-900 rounded-[3rem] p-12 lg:p-20 text-white text-center space-y-8 relative overflow-hidden mt-12">
+            <div className="bg-slate-900 rounded-[2.5rem] p-12 lg:p-20 text-white text-center space-y-8 relative overflow-hidden mt-12">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-[100px] rounded-full" />
                 <h2 className="text-3xl md:text-5xl font-display tracking-tight leading-tight">Professional Fees</h2>
                 <p className="text-slate-400 max-w-2xl mx-auto text-lg font-light leading-relaxed">

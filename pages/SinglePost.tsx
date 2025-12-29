@@ -1,5 +1,6 @@
 
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import { useParams, Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import PageHeader from '../components/PageHeader';
@@ -70,9 +71,9 @@ const SinglePost: React.FC = () => {
 
                     <img src={post.image} alt={post.title} className="rounded-[2rem] shadow-lg mb-12" />
 
-                    <div className="prose prose-lg max-w-none">
-                        <p className="lead">{post.excerpt}</p>
-                        <p>{post.content}</p>
+                    <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-slate-900 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-strong:text-slate-900 prose-a:text-blue-600">
+                        {/* <p className="lead">{post.excerpt}</p> */}
+                        <ReactMarkdown>{post.content}</ReactMarkdown>
                     </div>
 
                     <hr className="my-16" />
