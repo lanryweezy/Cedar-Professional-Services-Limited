@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 
@@ -138,58 +139,61 @@ const Navbar: React.FC = () => {
                 </div>
             </div>
 
-            {/* Mobile Menu Overlay */}
-            <div className={`md:hidden bg-white fixed inset-0 z-40 transition-all duration-500 ease-in-out transform ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`} style={{ top: '0', paddingTop: '5rem' }}>
-                <div className="px-6 py-8 space-y-2 h-full overflow-y-auto bg-white">
-                    {navItems.map((item, idx) => (
-                        <div key={item.path} className="space-y-2">
-                            {item.submenu ? (
-                                <div className="space-y-2">
-                                    <button
-                                        onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                                        className="w-full flex justify-between items-center px-6 py-5 text-2xl font-display text-slate-900 rounded-2xl hover:bg-slate-50 transition-all"
-                                    >
-                                        {item.label}
-                                        <ChevronDown size={24} className={`transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180 text-blue-600' : 'text-slate-300'}`} />
-                                    </button>
-                                    <div className={`overflow-hidden transition-all duration-500 ${activeDropdown === item.label ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                        <div className="grid grid-cols-1 gap-2 pl-6 pt-2 pb-4">
-                                            {item.submenu.map((sub) => (
-                                                <NavLink
-                                                    key={sub.path}
-                                                    to={sub.path}
-                                                    onClick={handleNavClick}
-                                                    className={({ isActive }) => `flex items-center justify-between px-6 py-4 text-lg font-display rounded-2xl transition-all ${isActive ? 'text-blue-600 bg-blue-50' : 'text-slate-600'}`}
-                                                >
-                                                    {sub.label}
-                                                    <ChevronRight size={18} />
-                                                </NavLink>
-                                            ))}
+            {/* Mobile Menu Overlay - Portaled to Body to avoid fixed positioning issues with backdrop-filter */}
+            {typeof document !== 'undefined' && createPortal(
+                <div className={`md:hidden bg-white fixed inset-0 z-[100] transition-all duration-500 ease-in-out transform ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`} style={{ top: '0', paddingTop: '5rem' }}>
+                    <div className="px-6 py-8 space-y-2 h-full overflow-y-auto bg-white">
+                        {navItems.map((item, idx) => (
+                            <div key={item.path} className="space-y-2">
+                                {item.submenu ? (
+                                    <div className="space-y-2">
+                                        <button
+                                            onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
+                                            className="w-full flex justify-between items-center px-6 py-5 text-2xl font-display text-slate-900 rounded-2xl hover:bg-slate-50 transition-all"
+                                        >
+                                            {item.label}
+                                            <ChevronDown size={24} className={`transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180 text-blue-600' : 'text-slate-300'}`} />
+                                        </button>
+                                        <div className={`overflow-hidden transition-all duration-500 ${activeDropdown === item.label ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                            <div className="grid grid-cols-1 gap-2 pl-6 pt-2 pb-4">
+                                                {item.submenu.map((sub) => (
+                                                    <NavLink
+                                                        key={sub.path}
+                                                        to={sub.path}
+                                                        onClick={handleNavClick}
+                                                        className={({ isActive }) => `flex items-center justify-between px-6 py-4 text-lg font-display rounded-2xl transition-all ${isActive ? 'text-blue-600 bg-blue-50' : 'text-slate-600'}`}
+                                                    >
+                                                        {sub.label}
+                                                        <ChevronRight size={18} />
+                                                    </NavLink>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ) : (
-                                <NavLink
-                                    to={item.path}
-                                    onClick={handleNavClick}
-                                    style={{ transitionDelay: `${idx * 50}ms` }}
-                                    className={({ isActive }) => `block w-full text-left px-6 py-5 text-2xl font-display transition-all duration-300 rounded-2xl outline-none transform ${isOpen ? 'translate-x-0' : 'translate-x-8'} ${isActive ? 'text-blue-600 bg-blue-50 font-bold' : 'text-slate-700 hover:bg-slate-50'}`}
-                                >
-                                    {item.label}
-                                </NavLink>
-                            )}
-                        </div>
-                    ))}
+                                ) : (
+                                    <NavLink
+                                        to={item.path}
+                                        onClick={handleNavClick}
+                                        style={{ transitionDelay: `${idx * 50}ms` }}
+                                        className={({ isActive }) => `block w-full text-left px-6 py-5 text-2xl font-display transition-all duration-300 rounded-2xl outline-none transform ${isOpen ? 'translate-x-0' : 'translate-x-8'} ${isActive ? 'text-blue-600 bg-blue-50 font-bold' : 'text-slate-700 hover:bg-slate-50'}`}
+                                    >
+                                        {item.label}
+                                    </NavLink>
+                                )}
+                            </div>
+                        ))}
 
-                    <div className="pt-12 px-6">
-                        <div className="h-px w-12 bg-blue-600 mb-8"></div>
-                        <p className="text-slate-400 text-sm font-light leading-relaxed">
-                            3rd Floor CSS Bookshop House, <br />
-                            50/52 Broad Street, CMS, Lagos.
-                        </p>
+                        <div className="pt-12 px-6">
+                            <div className="h-px w-12 bg-blue-600 mb-8"></div>
+                            <p className="text-slate-400 text-sm font-light leading-relaxed">
+                                3rd Floor CSS Bookshop House, <br />
+                                50/52 Broad Street, CMS, Lagos.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div>,
+                document.body
+            )}
         </nav>
     );
 };
