@@ -20,7 +20,9 @@ const SinglePost: React.FC = () => {
         );
     }
 
-    const recommendedPosts = posts.filter(p => p.category === post.category && p.slug !== post.slug).slice(0, 3);
+    const recommendedPosts = posts
+        .filter(p => (p.category === post.category || p.author === post.author) && p.slug !== post.slug)
+        .slice(0, 3);
 
     const articleSchema = {
         "@context": "https://schema.org",
@@ -71,8 +73,10 @@ const SinglePost: React.FC = () => {
 
                     <img src={post.image} alt={post.title} className="rounded-[2rem] shadow-lg mb-12" />
 
-                    <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-slate-900 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-strong:text-slate-900 prose-a:text-blue-600">
-                        {/* <p className="lead">{post.excerpt}</p> */}
+                    <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-slate-900 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-strong:text-slate-900 prose-a:text-blue-600 prose-img:rounded-3xl prose-img:shadow-xl">
+                        <p className="text-xl text-slate-500 font-light leading-relaxed mb-12 border-l-4 border-blue-600 pl-8 italic">
+                            {post.excerpt}
+                        </p>
                         <ReactMarkdown>{post.content}</ReactMarkdown>
                     </div>
 
