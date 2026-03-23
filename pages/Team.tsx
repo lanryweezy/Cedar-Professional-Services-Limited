@@ -48,7 +48,7 @@ const Team: React.FC = () => {
             title: "Technical Manager",
             qualifications: "B.Tech., MBA in view, COREN, NSE.",
             bio: "Engr. Adelowo is a Project Management enthusiast and Registered Engineer (COREN). With over a decade of experience, he has managed multi-million dollar projects across Nigeria, Zimbabwe, and Ivory Coast.\n\nHe specializes in Renewable Energy (Solar PV) and Remote Monitoring Systems (IoT). His achievements include delivering a $16M project for Galooli Advanced Solution and serving as Solar EPC Project Manager at Mowal Technologies.",
-            image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
         },
         {
             name: "Awoniyi Ayomiposi",
@@ -62,21 +62,21 @@ const Team: React.FC = () => {
             title: "Tally Solution Expert",
             qualifications: "AAT, B.Sc., MBA, ACTI, FCA.",
             bio: "Lekan is a Certified Tally Technologist and Master Tally Partner. He specializes in ERP Solutions and has set up over 200 companies globally, including projects in Angola, Ivory Coast, and Ghana.\n\nHe is the driving force behind Tally.ERP 9 growth in Nigeria, serving over 500 clients including the World Bank, Vitabiotics, and KFC Nigeria.",
-            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=800&q=80"
         },
         {
             name: "Mr. Adesuyi Bamidele",
             title: "Senior Consultant",
             qualifications: "AAT, B.Sc., MBA, FCA.",
             bio: "A seasoned practicing accountant with an MBA from OAU. He holds a Diploma in IFRS from Mumbai, India and is a Fellow of ICAN.\n\nFormerly COO at Gbenga Badejo & Co, he oversaw financial services for top companies like BUA Group and Reddington Multi-Specialist Hospital. He specializes in Forensic Audit and IFRS implementation.",
-            image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?auto=format&fit=crop&w=800&q=80"
         },
         {
             name: "Ogunbode Saheed Sunday",
             title: "Audit Manager",
             qualifications: "HND, ACA, ACTI.",
             bio: "Chartered Accountant with 12+ years experience. He joined Olugbenga Folarin & Co in 2015. He specializes in External Audit, Tax Clearance Certificate processing with FIRS/LIRS, and Secretarial Services under CAMA 2020.",
-            image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&w=800&q=80"
         }
     ];
 
