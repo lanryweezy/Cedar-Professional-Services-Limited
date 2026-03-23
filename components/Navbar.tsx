@@ -17,7 +17,16 @@ const Navbar: React.FC = () => {
 
     const navItems = [
         { label: 'Home', path: '/' },
-        { label: 'Services', path: '/services' },
+        {
+            label: 'Services',
+            path: '/services',
+            submenu: [
+                { label: 'Audit & Forensic', path: '/services' },
+                { label: 'Financial & Tax', path: '/services' },
+                { label: 'Corporate Strategy', path: '/services' },
+                { label: 'Specialized Services', path: '/services' }
+            ]
+        },
         {
             label: 'About',
             path: '/about',
@@ -109,7 +118,7 @@ const Navbar: React.FC = () => {
                                 )}
 
                                 {item.submenu && (
-                                    <div className={`absolute top-full left-0 w-48 bg-white/95 backdrop-blur-md border border-slate-100 rounded-2xl shadow-2xl p-2 transition-all duration-300 origin-top transform ${activeDropdown === item.label ? 'opacity-100 scale-100 translate-y-2' : 'opacity-0 scale-95 pointer-events-none'}`}>
+                                    <div className={`absolute top-full left-0 w-56 bg-white/95 backdrop-blur-md border border-slate-100 rounded-2xl shadow-2xl p-2 transition-all duration-300 origin-top transform ${activeDropdown === item.label ? 'opacity-100 scale-100 translate-y-2' : 'opacity-0 scale-95 pointer-events-none'}`}>
                                         {item.submenu.map((sub) => (
                                             <NavLink
                                                 key={sub.path}
