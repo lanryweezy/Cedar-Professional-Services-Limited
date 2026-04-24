@@ -7,9 +7,9 @@ const About: React.FC = () => {
     return (
         <div className="animate-in fade-in duration-700">
             <SEO
-                title="About Us | Cedar Professional Services Nigeria"
-                description="Cedar Professional Services is a leading financial consultancy firm in Lagos, Nigeria, specializing in forensic audit and tax advisory since 2013."
-                keywords="Cedar Professional Services, Nigeria accounting history, forensic audit firm Lagos"
+                title="About Us | Top Accountants & Tax Experts in Nigeria"
+                description="Cedar Professional Services is a leading accounting and financial consultancy firm in Lagos, Nigeria. ICAN & ACCA certified experts in forensic audit, tax advisory (FIRS/LIRS/NRS) since 2013."
+                keywords="Cedar Professional Services, ICAN accountants, ACCA, top accounting firm Lagos, tax advisory Nigeria, FIRS, LIRS, forensic audit firm Lagos"
                 canonicalUrl="https://cedarpro.com.ng/about"
             />
             <PageHeader

@@ -83,9 +83,9 @@ const Home: React.FC = () => {
     return (
         <div className="animate-in fade-in duration-700">
             <SEO
-                title="Cedar Professional Services | Forensic Audit & Tax Advisory Nigeria"
-                description="Top-tier Nigerian accounting firm for Forensic Audit, Fraud Investigation, and LIRS/FIRS Tax Compliance. CAC & Bank of Industry Accredited."
-                keywords="forensic accounting Lagos, tax clearance certificate Nigeria, CAC agent Lagos, audit firm Nigeria, CAMA 2020 compliance"
+                title="Cedar Professional Services | Expert Accountants, Forensic Audit & Tax Advisory Nigeria"
+                description="Top-tier Nigerian accounting firm for Forensic Audit, Fraud Investigation, and LIRS/FIRS/NRS Tax Compliance. ACCA & ICAN Certified. CAC & Bank of Industry Accredited."
+                keywords="accountant Lagos, accounting firm Nigeria, ACCA, ICAN, FIRS, LIRS, NRS tax, forensic accounting Lagos, tax clearance certificate Nigeria, CAC agent Lagos, audit firm Nigeria, CAMA 2020 compliance, tax consultant"
                 canonicalUrl="https://cedarpro.com.ng/"
                 schemaData={organizationSchema}
             />
@@ -102,7 +102,7 @@ const Home: React.FC = () => {
                             Integrity in <br /><span className="text-blue-600 italic">Financial</span> Oversight.
                         </h1>
                         <p className="text-xl text-slate-600 max-w-xl leading-relaxed font-light">
-                            Expert forensic investigation, tax advisory, and statutory audit services. We safeguard your corporate legacy through precision and unmatched professional passion.
+                            Expert forensic investigation, FIRS/LIRS/NRS tax advisory, and statutory audit services. ACCA & ICAN certified accountants safeguarding your corporate legacy through precision and unmatched professional passion.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-5 justify-center md::justify-start pt-6">
                             <button
@@ -183,10 +183,10 @@ const Home: React.FC = () => {
                                 features: ["Detailed Review Programs", "Regulatory Decree Compliance", "Opinion Reliability"]
                             },
                             {
-                                title: "Tax Consultancy",
+                                title: "Tax Consultancy (FIRS/LIRS/NRS)",
                                 icon: <Calculator className="text-blue-600" size={32} />,
-                                desc: "Bringing clarity to complexities. Preparation of computations, registrations, and processing of certificates.",
-                                features: ["LIRS & FIRS Expertise", "Tax Planning Opportunities", "Acceptance Certificates"]
+                                desc: "Bringing clarity to tax complexities. Preparation of computations, registrations, and processing of certificates for businesses and individuals.",
+                                features: ["LIRS, FIRS & NRS Expertise", "Tax Planning Opportunities", "Acceptance Certificates"]
                             },
                             {
                                 title: "Fraud Investigation",

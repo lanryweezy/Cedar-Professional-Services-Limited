@@ -15,9 +15,9 @@ const Blog: React.FC = () => {
     return (
         <div className="animate-in fade-in duration-700">
             <SEO
-                title="Insights & Industry Updates | Cedar Pro Nigeria"
-                description="Expert analysis on Nigerian tax laws, forensic audit trends, and corporate financial strategies."
-                keywords="tax insights Nigeria, forensic audit blog, corporate finance news Lagos, Cedar Professional Services insights"
+                title="Accounting & Tax Insights | Cedar Pro Nigeria"
+                description="Expert analysis on Nigerian tax laws (FIRS/LIRS/NRS), accounting practices, forensic audit trends, and corporate financial strategies by certified ICAN/ACCA professionals."
+                keywords="tax insights Nigeria, FIRS updates, accounting blog Nigeria, ICAN articles, forensic audit blog, corporate finance news Lagos, Cedar Professional Services insights"
                 canonicalUrl="https://cedarpro.com.ng/blog"
             />
             <PageHeader

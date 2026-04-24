@@ -63,9 +63,9 @@ const Contact: React.FC = () => {
     return (
         <div className="min-h-screen bg-white flex flex-col lg:flex-row pt-20">
             <SEO
-                title="Contact Us | Cedar Pro Nigeria"
-                description="Connect with our experts in Lagos."
-                keywords="Contact Forensic Accountant Lagos"
+                title="Contact Expert Accountants | Cedar Professional Services Nigeria"
+                description="Get in touch with our certified accountants and financial experts in Lagos for forensic audit, tax (FIRS/LIRS), and advisory services."
+                keywords="contact accountant Lagos, hire tax consultant Nigeria, accounting firm contact Lagos, tax advisor Nigeria, ICAN firm contact, ACCA contact"
                 canonicalUrl="https://cedarpro.com.ng/contact"
             />
 
