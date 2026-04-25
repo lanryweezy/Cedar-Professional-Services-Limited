@@ -49,6 +49,7 @@ const Clients: React.FC = () => {
                                         <img
                                             src={c.logo ? c.logo : `https://logo.clearbit.com/${c.domain}`}
                                             alt={`${c.name} logo`}
+                                            loading="lazy"
                                             className="w-full h-full object-contain"
                                             onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                         />
@@ -70,6 +71,7 @@ const Clients: React.FC = () => {
                                         <img
                                             src={c.logo ? c.logo : `https://logo.clearbit.com/${c.domain}`}
                                             alt={`${c.name} logo`}
+                                            loading="lazy"
                                             className="w-full h-full object-contain"
                                             onError={(e) => { e.currentTarget.style.display = 'none'; }}
                                         />

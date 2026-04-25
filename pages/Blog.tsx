@@ -15,9 +15,9 @@ const Blog: React.FC = () => {
     return (
         <div className="animate-in fade-in duration-700">
             <SEO
-                title="Insights & Industry Updates | Cedar Pro Nigeria"
-                description="Expert analysis on Nigerian tax laws, forensic audit trends, and corporate financial strategies."
-                keywords="tax insights Nigeria, forensic audit blog, corporate finance news Lagos, Cedar Professional Services insights"
+                title="Accounting & Tax Insights | Cedar Pro Nigeria"
+                description="Expert analysis on Nigerian tax laws (FIRS/LIRS/NRS), accounting practices, forensic audit trends, and corporate financial strategies by certified ICAN/ACCA professionals."
+                keywords="tax insights Nigeria, FIRS updates, accounting blog Nigeria, ICAN articles, forensic audit blog, corporate finance news Lagos, Cedar Professional Services insights"
                 canonicalUrl="https://cedarpro.com.ng/blog"
             />
             <PageHeader
@@ -50,11 +50,13 @@ const Blog: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                        {filteredPosts.map((post, i) => (
-                            <Link to={`/blog/${post.slug}`} key={post.slug} className="flex">
+                        {filteredPosts.map((post, i) => {
+                            const categorySlug = post.category.toLowerCase().replace(/ /g, '-');
+                            return (
+                            <Link to={`/blog/${categorySlug}/${post.slug}`} key={post.slug} className="flex">
                                 <article className="group cursor-pointer bg-white rounded-[2.5rem] p-4 border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col w-full">
                                     <div className="relative h-64 mb-8 overflow-hidden rounded-[2rem] bg-slate-100 border border-slate-100">
-                                        <img src={post.image} alt={post.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                        <img src={post.image} alt={post.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                         <div className="absolute top-6 left-6 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold text-blue-700 uppercase tracking-widest">
                                             {post.category}
                                         </div>
@@ -78,7 +80,7 @@ const Blog: React.FC = () => {
                                     </div>
                                 </article>
                             </Link>
-                        ))}
+                        )})}
                     </div>
 
                     <div className="mt-24 p-12 lg:p-20 bg-slate-950 rounded-[3rem] text-center relative overflow-hidden">

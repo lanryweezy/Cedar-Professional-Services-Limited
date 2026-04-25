@@ -148,13 +148,33 @@ const Services: React.FC = () => {
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Accounting, Tax Advisory, and Forensic Audit",
+        "provider": {
+            "@type": "AccountingService",
+            "name": "Cedar Professional Services Limited"
+        },
+        "areaServed": "Nigeria",
+        "description": "Comprehensive financial, audit, tax, and advisory services. ICAN/ACCA certified accountants for FIRS/LIRS compliance, forensic investigation, and BOI advisory.",
+        "offers": {
+            "@type": "Offer",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "priceCurrency": "NGN"
+            }
+        }
+    };
+
     return (
         <div className="animate-in fade-in duration-700">
             <SEO
-                title="Professional Services | Cedar Professional Services Nigeria"
-                description="Comprehensive financial, audit, tax, and advisory services. From forensic investigation to ERP implementation and BOI advisory."
-                keywords="forensic audit Nigeria, tax consultancy Lagos, ERP implementation, financial due diligence, BOI advisory, business restructuring"
+                title="Accounting & Tax Services | Cedar Professional Services Nigeria"
+                description="Comprehensive financial, audit, tax, and advisory services. ICAN/ACCA certified accountants for FIRS/LIRS compliance, forensic investigation, and BOI advisory."
+                keywords="accountant services Lagos, tax consultant Nigeria, FIRS compliance, LIRS tax audit, ACCA, ICAN, forensic audit Nigeria, tax consultancy Lagos, ERP implementation, financial due diligence, BOI advisory, business restructuring"
                 canonicalUrl="https://cedarpro.com.ng/services"
+                schemaData={serviceSchema}
             />
             <PageHeader
                 title="Core Strategic Pillars"

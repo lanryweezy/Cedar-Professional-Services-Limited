@@ -60,13 +60,44 @@ const Contact: React.FC = () => {
         }, 1500);
     };
 
+    const localBusinessSchema = {
+        "@context": "https://schema.org",
+        "@type": "AccountingService",
+        "name": "Cedar Professional Services Limited",
+        "image": "https://cedarpro.com.ng/logo.png",
+        "@id": "",
+        "url": "https://cedarpro.com.ng/",
+        "telephone": "+2348034521158",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3rd Floor CSS Bookshop House, 50/52 Broad Street, CMS",
+            "addressLocality": "Lagos Island",
+            "addressRegion": "Lagos",
+            "postalCode": "101223",
+            "addressCountry": "NG"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "17:00"
+        }
+    };
+
     return (
         <div className="min-h-screen bg-white flex flex-col lg:flex-row pt-20">
             <SEO
-                title="Contact Us | Cedar Pro Nigeria"
-                description="Connect with our experts in Lagos."
-                keywords="Contact Forensic Accountant Lagos"
+                title="Contact Expert Accountants | Cedar Professional Services Nigeria"
+                description="Get in touch with our certified accountants and financial experts in Lagos for forensic audit, tax (FIRS/LIRS), and advisory services."
+                keywords="contact accountant Lagos, hire tax consultant Nigeria, accounting firm contact Lagos, tax advisor Nigeria, ICAN firm contact, ACCA contact"
                 canonicalUrl="https://cedarpro.com.ng/contact"
+                schemaData={localBusinessSchema}
             />
 
             {/* Left Column - Office Info */}
@@ -151,13 +182,16 @@ const Contact: React.FC = () => {
                                     </label>
                                     <input
                                         id="fullName"
+                                        name="fullName"
                                         type="text"
                                         placeholder="Olumide Johnson"
                                         value={formData.fullName}
                                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all placeholder:text-slate-300 ${errors.fullName ? 'border-red-500' : 'border-slate-50'}`}
+                                        aria-invalid={!!errors.fullName}
+                                        aria-describedby={errors.fullName ? "fullName-error" : undefined}
+                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 transition-all placeholder:text-slate-300 ${errors.fullName ? 'border-red-500' : 'border-slate-50'}`}
                                     />
-                                    {errors.fullName && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.fullName}</p>}
+                                    {errors.fullName && <p id="fullName-error" className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.fullName}</p>}
                                 </div>
 
                                 <div className="space-y-3">
@@ -166,13 +200,16 @@ const Contact: React.FC = () => {
                                     </label>
                                     <input
                                         id="email"
+                                        name="email"
                                         type="email"
                                         placeholder="example@company.com"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all placeholder:text-slate-300 ${errors.email ? 'border-red-500' : 'border-slate-50'}`}
+                                        aria-invalid={!!errors.email}
+                                        aria-describedby={errors.email ? "email-error" : undefined}
+                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 transition-all placeholder:text-slate-300 ${errors.email ? 'border-red-500' : 'border-slate-50'}`}
                                     />
-                                    {errors.email && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.email}</p>}
+                                    {errors.email && <p id="email-error" className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.email}</p>}
                                 </div>
 
                                 <div className="space-y-3">
@@ -181,13 +218,16 @@ const Contact: React.FC = () => {
                                     </label>
                                     <input
                                         id="companyName"
+                                        name="companyName"
                                         type="text"
                                         placeholder="Zenith Global Ltd"
                                         value={formData.companyName}
                                         onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all placeholder:text-slate-300 ${errors.companyName ? 'border-red-500' : 'border-slate-50'}`}
+                                        aria-invalid={!!errors.companyName}
+                                        aria-describedby={errors.companyName ? "companyName-error" : undefined}
+                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 transition-all placeholder:text-slate-300 ${errors.companyName ? 'border-red-500' : 'border-slate-50'}`}
                                     />
-                                    {errors.companyName && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.companyName}</p>}
+                                    {errors.companyName && <p id="companyName-error" className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.companyName}</p>}
                                 </div>
 
                                 <div className="space-y-3">
@@ -196,11 +236,12 @@ const Contact: React.FC = () => {
                                     </label>
                                     <input
                                         id="phone"
+                                        name="phone"
                                         type="text"
                                         placeholder="+234..."
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all placeholder:text-slate-300 border-slate-50`}
+                                        className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 transition-all placeholder:text-slate-300 border-slate-50`}
                                     />
                                 </div>
                             </div>
@@ -212,9 +253,10 @@ const Contact: React.FC = () => {
                                 <div className="relative">
                                     <select
                                         id="service"
+                                        name="service"
                                         value={formData.serviceCategory}
                                         onChange={(e) => setFormData({ ...formData, serviceCategory: e.target.value })}
-                                        className="w-full px-6 py-5 bg-slate-50 border-2 border-slate-50 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer"
+                                        className="w-full px-6 py-5 bg-slate-50 border-2 border-slate-50 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 transition-all appearance-none cursor-pointer"
                                     >
                                         <option value="">Forensic Investigation & Fraud Audit</option>
                                         <option value="tax">Tax Consultancy & Compliance</option>
@@ -232,13 +274,16 @@ const Contact: React.FC = () => {
                                 </label>
                                 <textarea
                                     id="requirements"
+                                    name="requirements"
                                     rows={5}
                                     placeholder="Briefly describe the context of your inquiry..."
                                     value={formData.requirements}
                                     onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
-                                    className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none transition-all resize-none placeholder:text-slate-300 ${errors.requirements ? 'border-red-500' : 'border-slate-50'}`}
+                                    aria-invalid={!!errors.requirements}
+                                    aria-describedby={errors.requirements ? "requirements-error" : undefined}
+                                    className={`w-full px-6 py-5 bg-slate-50 border-2 rounded-2xl focus:border-blue-600 focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 transition-all resize-none placeholder:text-slate-300 ${errors.requirements ? 'border-red-500' : 'border-slate-50'}`}
                                 ></textarea>
-                                {errors.requirements && <p className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.requirements}</p>}
+                                {errors.requirements && <p id="requirements-error" className="text-red-500 text-[10px] mt-1 flex items-center gap-1 font-bold tracking-wide uppercase"><AlertCircle size={12} /> {errors.requirements}</p>}
                             </div>
 
                             <button

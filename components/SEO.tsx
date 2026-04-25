@@ -7,9 +7,10 @@ interface SEOProps {
     keywords: string;
     canonicalUrl?: string; // Optional canonical URL
     schemaData?: object; // Optional structured data for Schema.org
+    image?: string; // Optional Open Graph Image
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description, keywords, canonicalUrl, schemaData }) => {
+const SEO: React.FC<SEOProps> = ({ title, description, keywords, canonicalUrl, schemaData, image }) => {
     useEffect(() => {
         document.title = title;
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -44,6 +45,27 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords, canonicalUrl, s
             document.head.appendChild(ogDesc);
         }
         ogDesc.setAttribute('content', description);
+
+        // Open Graph Image Tag
+        if (image) {
+            let ogImage = document.querySelector('meta[property="og:image"]');
+            if (!ogImage) {
+                ogImage = document.createElement('meta');
+                ogImage.setAttribute('property', 'og:image');
+                document.head.appendChild(ogImage);
+            }
+            ogImage.setAttribute('content', image);
+
+            // Twitter Image Tag
+            let twitterImage = document.querySelector('meta[name="twitter:image"]');
+            if (!twitterImage) {
+                twitterImage = document.createElement('meta');
+                twitterImage.setAttribute('name', 'twitter:image');
+                document.head.appendChild(twitterImage);
+            }
+            twitterImage.setAttribute('content', image);
+        }
+
 
         // Canonical Link Tag
         let canonicalLink = document.querySelector('link[rel="canonical"]');
