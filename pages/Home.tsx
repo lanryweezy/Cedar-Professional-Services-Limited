@@ -155,7 +155,8 @@ const Home: React.FC = () => {
                                     <div className="p-4 bg-white rounded-2xl border border-white/10 group-hover:border-blue-400 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all">
                                         <img
                                             src={partner.src || `https://logo.clearbit.com/${partner.domain}?size=128`}
-                                            alt={partner.name}
+                                            alt={`${partner.name} logo`}
+                                            loading="lazy"
                                             className="h-10 md:h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105"
                                         />
                                     </div>
@@ -284,6 +285,7 @@ const Home: React.FC = () => {
                             <img
                                 src="/olugbenga_folarin.jpg"
                                 alt="Managing Partner Olugbenga Folarin Portrait"
+                                loading="lazy"
                                 className="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-r from-slate-900 lg:from-slate-900 via-transparent to-transparent pointer-events-none"></div>

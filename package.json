@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "postbuild": "cp data/blogPosts.ts scripts/blogPosts.js && sed -i 's/export const posts: Post\\[\\]/export const posts/g' scripts/blogPosts.js && sed -i 's/import { Post } from \\x27..\\/types\\x27;//g' scripts/blogPosts.js && node scripts/generate-seo-files.mjs && rm scripts/blogPosts.js",
     "preview": "vite preview"
   },
   "dependencies": {

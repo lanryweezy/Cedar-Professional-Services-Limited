@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
                     <div className="space-y-8 text-center md:text-left">
                         <div className="flex items-center gap-4 justify-center md:justify-start">
-                            <img src="/logo.png" className="h-10 w-auto" alt="Cedar Professional Services Footer Logo" />
+                            <img src="/logo.png" className="h-10 w-auto" alt="Cedar Professional Services Footer Logo" loading="lazy" />
                             <div className="flex flex-col text-left">
                                 <span className="font-bold text-xl leading-none text-slate-900 tracking-tight uppercase">CEDAR</span>
                                 <span className="text-[7px] font-bold tracking-[0.1em] uppercase text-blue-700">Professional Services</span>

@@ -96,12 +96,12 @@ const Team: React.FC = () => {
                             <button
                                 key={idx}
                                 onClick={() => setSelectedPerson(person)}
-                                className="flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group text-left focus:outline-none"
+                                className="flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                                 aria-label={`View profile of ${person.name}`}
                             >
-                                <div className="h-72 overflow-hidden relative">
+                                <div className="h-72 overflow-hidden relative w-full">
                                     <Suspense fallback={<div className="w-full h-full bg-slate-200 animate-pulse" />}>
-                                        <LazyTeamImage src={person.image} alt={person.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                        <LazyTeamImage src={person.image} alt={`Portrait of ${person.name}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                     </Suspense>
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-8 pointer-events-none">
                                         <div>
