@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
                         aria-label="Cedar Home"
                     >
                         <div className="relative h-12 w-auto flex items-center justify-center">
-                            <img
+                            <img loading="lazy"
                                 src="/logo.png"
                                 alt="Cedar Professional Services Logo"
                                 className="h-full w-auto object-contain transition-transform group-hover:scale-105"

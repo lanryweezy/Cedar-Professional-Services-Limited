@@ -1,3 +1,4 @@
+import { getArticleSchema } from "../utils/schema";
 
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -24,31 +25,7 @@ const SinglePost: React.FC = () => {
         .filter(p => (p.category === post.category || p.author === post.author) && p.slug !== post.slug)
         .slice(0, 3);
 
-    const articleSchema = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": post.title,
-        "image": post.image,
-        "datePublished": new Date(post.date).toISOString(),
-        "dateModified": new Date(post.date).toISOString(), // Assuming dateModified is the same as datePublished for now
-        "author": {
-            "@type": "Person",
-            "name": post.author
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Cedar Professional Services Limited",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://cedarpro.com.ng/logo.png"
-            }
-        },
-        "description": post.excerpt,
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": `https://cedarpro.com.ng/blog/${post.category.toLowerCase().replace(/ /g, '-')}/${post.slug}`
-        }
-    };
+    const articleSchema = getArticleSchema(post);
 
     const currentUrl = `https://cedarpro.com.ng/blog/${post.category.toLowerCase().replace(/ /g, '-')}/${post.slug}`;
 
@@ -86,7 +63,7 @@ const SinglePost: React.FC = () => {
                         <div className="flex items-center gap-2"><User size={16} /> {post.author}</div>
                     </div>
 
-                    <img src={post.image} alt={post.title} className="rounded-[2rem] shadow-lg mb-12" />
+                    <img loading="lazy"  src={post.image} alt={post.title} className="rounded-[2rem] shadow-lg mb-12" />
 
                     <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-slate-900 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-strong:text-slate-900 prose-a:text-blue-600 prose-img:rounded-3xl prose-img:shadow-xl">
                         <p className="text-xl text-slate-500 font-light leading-relaxed mb-12 border-l-4 border-blue-600 pl-8 italic">
@@ -127,7 +104,7 @@ const SinglePost: React.FC = () => {
                             {recommendedPosts.map((recPost, i) => (
                                 <Link to={`/blog/${recPost.category.toLowerCase().replace(/ /g, '-')}/${recPost.slug}`} key={i}>
                                     <article className="group cursor-pointer">
-                                        <img src={recPost.image} alt={recPost.title} className="rounded-2xl shadow-md mb-4" />
+                                        <img loading="lazy"  src={recPost.image} alt={recPost.title} className="rounded-2xl shadow-md mb-4" />
                                         <h3 className="text-xl font-display text-slate-900 leading-tight group-hover:text-blue-600 transition-colors mb-2">
                                             {recPost.title}
                                         </h3>
